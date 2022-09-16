@@ -1,0 +1,46 @@
+body{
+    background-color:  lightblue;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+p.description{
+    font-family: 'Montserrat','Oswald', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    color: black;
+}
+
+ul.unorder-list{
+    text-align: center;
+}
+
+ol.order-list{
+    text-align: center;
+}
+
+img.my-image{
+    border-radius: 100%;
+}
+
+li.list-disciplinado{
+    font-size: 20px;
+    font-weight: 600;
+}
+li.list-espirito-de-lideranca{
+    font-size: 19px
+}
+
+li.list-proativo{
+    font-size: 18px;
+}
+
+li.list-focado{
+    font-size: 17px;
+}
+
