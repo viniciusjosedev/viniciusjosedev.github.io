@@ -3,17 +3,31 @@ body{
     text-align: center;
 }
 
+.main{
+    height: 250px;
+    width: auto;
+}
+
 h1{
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     text-align: center;
 }
 
+.foto{
+    width: 170px;
+    height: 170px;
+    float: left;
+    margin-left: 250px;
+}
+
 p.description{
-    font-family: 'Montserrat','Oswald', sans-serif;
+    width: 500px;
+    height: 120px;
+    float: left;
     font-size: 20px;
-    font-style: normal;
-    color: black;
+    padding-top: 20px;
+    box-sizing: border-box;
 }
 
 ul.unorder-list{
@@ -44,3 +58,15 @@ li.list-focado{
     font-size: 17px;
 }
 
+
+
+/* font-size: 80px;
+width: 700px;
+margin-top: 10px;
+font-family: 'Montserrat','Oswald', sans-serif;
+font-size: 20px;
+font-style: normal;
+color: white;
+background-color: red;
+margin-bottom: 90px;
+} */
