@@ -3,17 +3,34 @@ body{
     text-align: center;
 }
 
+.main{
+    height: 250px;
+    width: auto;
+}
+
 h1{
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     text-align: center;
 }
 
+.my-image{
+    background-color: black;
+    width: 170px;
+    height: 170px;
+    float: left;
+    margin-left: 250px;
+    padding: 5px;
+}
+
 p.description{
-    font-family: 'Montserrat','Oswald', sans-serif;
+    width: 500px;
+    height: 120px;
+    float: left;
     font-size: 20px;
-    font-style: normal;
-    color: black;
+    padding-top: 20px;
+    box-sizing: border-box;
+    margin-top: 37px;
 }
 
 ul.unorder-list{
@@ -28,19 +45,45 @@ img.my-image{
     border-radius: 100%;
 }
 
-li.list-disciplinado{
+.list-disciplinado{
+    width: 147.383px;
     font-size: 20px;
     font-weight: 600;
+    margin-left: 43%;
 }
-li.list-espirito-de-lideranca{
-    font-size: 19px
+.list-espirito-de-lideranca{
+    font-size: 19px;
 }
 
-li.list-proativo{
+.list-proativo{
     font-size: 18px;
+    width: 82.3333px;
+    margin-left: 46%;
 }
 
-li.list-focado{
+.list-focado{
     font-size: 17px;
+    width: 66.9667px;
+    margin-left: 47%;
 }
 
+
+ol li:nth-child(odd){
+    background-color: purple;
+    
+}
+
+#link-para-foto{
+    float: left;
+    margin-left: 29%;
+}
+
+.barra{
+    float: left;
+    margin-left: 3px;
+}
+
+#forum{
+    float:left;
+    margin-left: 3px;
+}
