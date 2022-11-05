@@ -1,0 +1,41 @@
+*{
+	margin: 0px;
+}
+
+header{
+	text-align: center;
+	position:static;
+}
+
+.section-cabecalho{
+	background-color: red;
+}
+
+h1{
+	color: white;
+	font-size: 100px;
+	width: auto;
+	height: 0px;
+	box-sizing: border-box;
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+}
+
+nav{
+	background-color: black;
+	height: 20px;
+	margin-top: 120px;
+	height: 40px;
+
+}
+
+li{
+	color:white;
+	display: inline-block;
+	font-size: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+
+}
+
