@@ -10,31 +10,69 @@
 <body>
 	<header class="header">
 		<section class="section-cabecalho">
-			<h1>Portifólio</h1>
 			<nav>
 				<ul>
-					<li>Bem-VIndo(a)</li>
-					<li>teste</li>
-					<li>teste</li>
-					<li>teste</li>	
+					<li id="img-eclipse"><img src="./images/brilho.png" class="img-eclipse"></li>
+					<li><a href="#section-projetos">Projetos</a></li>
+					<li><a href="#section-tecnologia">Tecnologias</a></li>
+					<li><a href="#section-contato">Redes</a></li>
 				</ul>
 			</nav>
 		</section>
 	</header>
-	<main class="02-article">
-		<article class="01-article">
-			<h2 class="h2-bem-vndo">Bem-Vindo(a)</h2>
-			<img src="./images/eu.jpeg" alt="Foto de Vinicius José"
-			width="250px" class="my-image">
-			<p class="p-introdutorio">Oi, me chamo Vinicius José, tenho 20 anos e me formei na turma 27 da trybe. Sou um 
-				Desenvolvedor Web Full Stack Júnior. Aqui você encontra projetos feito por mim e mais
-				algumas informações abaixo 
-			</p>
+	<main class="main">
+		<article class="section-bemvindo">
+			<div>
+				<img src="./images/eu.jpeg" alt="Foto de Vinicius José"
+				width="250px" class="my-image">
+				<div>
+					<p class="p-introdutorio">Oi, me chamo Vinicius José,</p>
+					<p class="p-descricao">tenho 20 anos e me formei na turma 27 da trybe. Sou um 
+						Desenvolvedor Web Full Stack Júnior. Aqui você encontra projetos feito por mim e mais
+						algumas informações abaixo.</p>
+				</div>
+			</div>
 		</article>
-		<section class="section-projetos">
-			<h2 class="h2-projetos">Projetos</h2>
-			<a href=""><img src="./images/code.png" alt="Imagem do portifolio 1" 
-				class="01-portifolio" width="500px"></a>
+		<section class="section-projetos" id="section-projetos">
+			<div class="section-projetos-div-1">
+				<p>_________________________</p>
+				<h2 class="h2-projetos">Projetos</h2>
+				<p>_________________________</p>
+			</div>
+			<div class="section-projetos-div-2">
+				<div class="projetos">
+					<img src="./images/primeiro-projeto.png" alt="Imagem do portifolio 1" 
+					class="01-portifolio">
+					<div>
+						<p class="sobreposicao">Project lessons learned</p>
+						<p class="descricao">Primeiro projeto feito na trybe. Um projeto simples para fazer uma página referente a própria pessoa desenvolvedora.<br>Tecnologia: HTML.</p>
+					</div>
+				</div>
+				<div class="projetos">
+					<img src="./images/segundo-projeto.png" alt="Imagem do portifolio 1" 
+					class="01-portifolio">
+					<div>
+						<p class="sobreposicao">Project playground functions</p>
+						<p class="descricao">Segundo projeto realizado. Um projeto simples para resolução de uma série de problemas lógicos usando o JavaScript como linguagem de programação.<br>Tecnologia: JavaScript</p>
+					</div>
+				</div>
+				<div class="projetos">
+					<img src="./images/terceiro-projeto.png" alt="Imagem do portifolio 1" 
+					class="01-portifolio">
+					<div>
+						<p class="sobreposicao">Project pixel art</p>
+						<p class="descricao">Terceiro projeto realizado. Um projeto um pouco mais complexo, usando os conhecimentos de local storage e capturas de elementos.<br>Tecnologia: HTML, CSS e JavaScript</p>
+					</div>
+				</div>
+				<div class="projetos">
+					<img src="./images/quarto-projeto.png" alt="Imagem do portifolio 1" 
+					class="01-portifolio">
+					<div>
+						<p class="sobreposicao">Project meme generator</p>
+						<p class="descricao">Projeto bônus. Projeto muito divertido de se fazer, o próprio nome já entrega o mesmo. Foi requerido a criação de uma página de criação memes.<br>Tecnologia: HTML, CSS e JavaScript</p>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="section-contato">
 			<h2 class="h2-contato">Minhas Redes</h2>
