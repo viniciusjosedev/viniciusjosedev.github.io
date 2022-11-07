@@ -1,49 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portifólio</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
-
-    </head>
-
-    <body>
-        <div class="main">
-           <h1>Vinicius José da Silva</h1>
-        <!-- <ul class="unorder-list">
-            <li><a href="#Foto"> Foto</a>;</li>
-            <li><a href="#description"> Descrição</a>;</li>
-            <li><a href="#Habilidades"> Habilidades</a>;</li>
-            <li><a href="#link para foto"> Link para foto</a>;</li>
-            <li><a href="#Forum"> Forúm preferido</a>;</li>
-        </ul> -->
-
-            <img id="my-foto" class="my-image"src="images/eu.jpeg" alt="Vinicius José" width="150" height="150">
-            <p id="description" class="description">Sou 
-            <span style="font-weight: 900; font-size: 22px" class="description">brasileiro</span>, 
-            nascido e residente em <span style="font-weight: 900; font-size: 22px">
-            caruaru/PE</span>, gosto de programar, apenas.</p>    
-        </div>
-        <br></p>
-        <h2 id="Habilidades">Lista das minhas melhores habilidades</h2>
-        <ol class="order-list">
-            <li class="list-disciplinado">Disciplinado;</li>
-            <li class="list-espirito-de-lideranca">Espírito de liderança;</li>
-            <li class="list-proativo">Proativo;</li>
-            <li class="list-focado">Focado.</li>
-        </ol>
-        <p id="link-para-foto">Clique <a href="Fotos/eu.jpeg">aqui</a> para abrir minha foto</p>
-        <p class="barra">|</p>
-        <p id="forum">Gosto muito deste <a href="https://forum.adrenaline.com.br/" target="_blank">
-            fórum</a></p>
-    </body>
-
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Portifólio</title>
+</head>
+<body>
+	<header class="header">
+		<section class="section-cabecalho">
+			<nav>
+				<ul>
+					<li id="img-eclipse"><img src="./images/brilho.png" class="img-eclipse"></li>
+					<li><a href="#section-projetos">Projetos</a></li>
+					<li><a href="#section-tecnologias">Tecnologias</a></li>
+					<li><a href="#section-contato">Redes</a></li>
+				</ul>
+			</nav>
+		</section>
+	</header>
+	<main class="main">
+		<article class="section-bemvindo">
+			<div>
+				<img src="./images/eu.jpeg" alt="Foto de Vinicius José"
+				width="250px" class="my-image">
+				<div>
+					<p class="p-introdutorio">Oi, me chamo Vinicius José,</p>
+					<p class="p-descricao">tenho 20 anos e me formei na turma 27 da trybe. Sou um 
+						Desenvolvedor Web Full Stack Júnior. Aqui você encontra projetos feito por mim e mais
+						algumas informações abaixo.</p>
+				</div>
+			</div>
+		</article>
+		<section class="section-projetos" id="section-projetos">
+			<div class="section-projetos-div-1">
+				<p>_________________________</p>
+				<h2 class="h2-projetos">Projetos</h2>
+				<p>_________________________</p>
+			</div>
+			<div class="section-projetos-div-2">
+				<div class="projetos">
+					<img src="./images/primeiro-projeto.png" alt="Imagem do portifolio 1" 
+					class="01-portifolio">
+					<div>
+						<p class="sobreposicao">Project lessons learned</p>
+						<p class="descricao">Primeiro projeto feito na trybe. Um projeto simples para fazer uma página referente a própria pessoa desenvolvedora.<br>Tecnologia: HTML.</p>
+					</div>
+				</div>
+				<div class="projetos">
+					<img src="./images/segundo-projeto.png" alt="Imagem do portifolio 1" 
+					class="01-portifolio">
+					<div>
+						<p class="sobreposicao">Project playground functions</p>
+						<p class="descricao">Segundo projeto realizado. Um projeto simples para resolução de uma série de problemas lógicos usando o JavaScript como linguagem de programação.<br>Tecnologia: JavaScript</p>
+					</div>
+				</div>
+				<div class="projetos">
+					<img src="./images/terceiro-projeto.png" alt="Imagem do portifolio 1" 
+					class="01-portifolio">
+					<div>
+						<p class="sobreposicao">Project pixel art</p>
+						<p class="descricao">Terceiro projeto realizado. Um projeto um pouco mais complexo, usando os conhecimentos de local storage e capturas de elementos.<br>Tecnologia: HTML, CSS e JavaScript</p>
+					</div>
+				</div>
+				<div class="projetos">
+					<img src="./images/quarto-projeto.png" alt="Imagem do portifolio 1" 
+					class="01-portifolio">
+					<div>
+						<p class="sobreposicao">Project meme generator</p>
+						<p class="descricao">Projeto bônus. Projeto muito divertido de se fazer, o próprio nome já entrega o mesmo. Foi requerido a criação de uma página de criação memes.<br>Tecnologia: HTML, CSS e JavaScript</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-tecnologias" id="section-tecnologias">
+			<div class="section-tecnologias-div-1">
+				<p>_________________________</p>
+				<h2 class="h2-projetos">Tecnologias / Ferramentas</h2>
+				<p>_________________________</p>
+			</div>
+			<div class="section-tecnologias-div-2">
+				<div class="projetos">
+					<p>HTML5 e CSS3</p>
+					<div>
+						<img src="./images/html.png" alt="Imagem do portifolio 1" 
+						class="01-portifolio">
+						<img src="./images/css.png" alt="Imagem do portifolio 1" 
+						class="01-portifolio">
+				  </div>
+				</div>
+				<div class="projetos">
+					<p>JavaScript e Jest</p>
+					<div>
+						<img src="./images/javascript.png" alt="Imagem do portifolio 1" 
+						class="01-portifolio">
+						<img src="./images/jest.png" alt="Imagem do portifolio 1" 
+						class="01-portifolio">
+				  </div>
+				</div>
+				<div class="projetos">
+					<p>HTML5 e CSS3</p>
+					<div>
+						<img src="./images/git.png" alt="Imagem do portifolio 1" 
+						class="01-portifolio">
+						<img src="./images/github.png" alt="Imagem do portifolio 1" 
+						class="01-portifolio">
+				  </div>
+				</div>
+				<div class="projetos">
+					<p>Terminal</p>
+					<div>
+						<img src="./images/terminal.png" alt="Imagem do portifolio 1" 
+						class="01-portifolio">
+				  </div>
+				</div>
+			</div>
+		</section>
+		<section class="section-contato">
+			<div class="section-projetos-div-1">
+				<p>___________________________</p>
+				<h2 class="h2-projetos">Redes</h2>
+				<p>___________________________</p>
+			</div>
+			<div class="section-contato-div-2">
+				<a href="https://github.com/viniciusjosedev" alt="Link para meu GitHub" 
+				target="_blank"><img src="images/github.png" alt="Icone do GitHub" width="100px"></a>
+				<a href="https://www.linkedin.com/in/vinicius-jos%C3%A9-b5699a207/" alt="Link para meu GitHub" 
+				target="_blank"><img src="images/linkedin.png" alt="Icone do GitHub" width="110px"></a>
+				<a href="https://twitter.com/viniciusjsilva" alt="Link para meu GitHub" 
+				target="_blank"><img src="images/twitter.png" alt="Icone do GitHub" width="100px"></a>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<h1>Ferramentas: HTML, CSS e JS.</h1>
+		<h1>2022 Ⓒ Desenvolvido por Vinicius José.</h1>
+	</footer>
+	<!-- <script src="script.js"></script> -->
+</body>
 </html>
