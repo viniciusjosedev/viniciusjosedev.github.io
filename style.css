@@ -3,7 +3,7 @@
 }
 
 body{
-	background-color: #222222;
+	background-color: white;
 }
 
 header{
@@ -298,3 +298,15 @@ footer h1{
 		background-color: white;
 	}
 } */
+
+p, a, h2, h1{ 
+	color:black;
+}
+
+header, .section-projetos, .section-contato, .section-tecnologias-div-2 .projetos{
+	background-color: #cccccc;
+}
+
+.projetos {
+	background-color: white;
+}
