@@ -12,7 +12,7 @@ const verific = () => {
 		dark()
 	} else {
 		localStorage.setItem('theme', 'ligh')
-		// ligh()
+		ligh()
 	}
 }
 
