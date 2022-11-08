@@ -5,11 +5,10 @@ document.getElementsByTagName('h2')]
 
 const listC = [document.getElementsByTagName('header')[0],
 document.getElementById('section-projetos'),
-document.getElementById('section-contato'),
-document.getElementsByClassName('section-tecnologias-div-2')[0]]
+document.getElementById('section-contato')]
 
-const listWhite = [document.getElementsByTagName('footer')[0],
-document.getElementsByClassName('prjetos'),
+const listWhite = [document.getElementsByClassName('projetos'),
+document.getElementsByTagName('footer')[0],
 document.getElementsByTagName('body')[0]]
 
 const transition = (theme) => {
@@ -18,31 +17,37 @@ const transition = (theme) => {
 			elemento[index].style.color = (theme === 'dark' ? 'white' : 'black')
 		}
 	})
-	listC.forEach((elemento) => {
-		elemento.style.backgroundColor = (theme === 'dark' ? '#222222' : '#cccccc')
+	listC.forEach((elemento, i) => {
+		elemento.style.backgroundColor = (theme === 'dark' ? '#000000' : '#cccccc')
 	})
 	listWhite.forEach((elemento, i) => {
-		if (i <= 1) {
+		if (i === 0) {
 			for (let index = 0; index < elemento.length; index += 1) {
-				elemento[index].style.backgroundColor = (theme === 'dark' ? 'black' : 'white')
+				if (index >= 4) {
+					elemento[index].style.backgroundColor = (theme === 'dark' ? 'black' : '#cccccc')
+				} else {
+					elemento[index].style.backgroundColor = (theme === 'dark' ? '#222222' : 'white')
+				}
 			}
 		} else {
-			elemento.style.backgroundColor = 'white'
+			elemento.style.backgroundColor = (theme === 'dark' ? '#222222' : 'white')
 		}
 	})
 }
 
 const verific = () => {
 	const storage = localStorage.getItem('theme');
-	if (storage === 'dark') {
+	if (storage === 'dark') {	
 		localStorage.setItem('theme', 'light')
 		transition('ligth')
-	// } else {
-	// 	localStorage.setItem('theme', 'light')
-	// 	transition('light')
-	// }
+		document.getElementsByClassName('img-eclipse')[0].src = './images/lua-crescente.png'
+	} else {
+		localStorage.setItem('theme', 'dark')
+		transition('dark')
+		document.getElementsByClassName('img-eclipse')[0].src = './images/brilho.png'
+	}
 }
-}
+
 const theme = () => {
 	document.getElementById('img-eclipse').addEventListener('click', verific);
 }
