@@ -1,21 +1,48 @@
-const dict = {body: document.getElementsByTagName('body')[0],}
+const listBlack = [document.getElementsByTagName('p'),
+document.getElementsByTagName('a'),
+document.getElementsByTagName('h1'),
+document.getElementsByTagName('h2')]
 
-const dark = () => {
-	({ body } = dict);
-	body.style.backgroundColor = 'white';
+const listC = [document.getElementsByTagName('header')[0],
+document.getElementById('section-projetos'),
+document.getElementById('section-contato'),
+document.getElementsByClassName('section-tecnologias-div-2')[0]]
+
+const listWhite = [document.getElementsByTagName('footer')[0],
+document.getElementsByClassName('prjetos'),
+document.getElementsByTagName('body')[0]]
+
+const transition = (theme) => {
+	listBlack.forEach((elemento) => {
+		for (let index = 0; index < elemento.length; index += 1) {
+			elemento[index].style.color = (theme === 'dark' ? 'white' : 'black')
+		}
+	})
+	listC.forEach((elemento) => {
+		elemento.style.backgroundColor = (theme === 'dark' ? '#222222' : '#cccccc')
+	})
+	listWhite.forEach((elemento, i) => {
+		if (i <= 1) {
+			for (let index = 0; index < elemento.length; index += 1) {
+				elemento[index].style.backgroundColor = (theme === 'dark' ? 'black' : 'white')
+			}
+		} else {
+			elemento.style.backgroundColor = 'white'
+		}
+	})
 }
 
 const verific = () => {
 	const storage = localStorage.getItem('theme');
-	if (storage === 'ligh') {
-		localStorage.setItem('theme', 'dark')
-		dark()
-	} else {
-		localStorage.setItem('theme', 'ligh')
-		ligh()
-	}
+	if (storage === 'dark') {
+		localStorage.setItem('theme', 'light')
+		transition('ligth')
+	// } else {
+	// 	localStorage.setItem('theme', 'light')
+	// 	transition('light')
+	// }
 }
-
+}
 const theme = () => {
 	document.getElementById('img-eclipse').addEventListener('click', verific);
 }
@@ -26,4 +53,4 @@ function init() {
 	} theme()
 }
 
-window.onload = init();
+window.onload = init()

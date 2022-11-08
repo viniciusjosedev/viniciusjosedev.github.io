@@ -3,7 +3,7 @@
 }
 
 body{
-	background-color: white;
+	background-color: #222222;
 }
 
 header{
@@ -299,14 +299,14 @@ footer h1{
 	}
 } */
 
-p, a, h2, h1{ 
+/* p, a, h2, h1 {
 	color:black;
 }
 
-header, .section-projetos, .section-contato, .section-tecnologias-div-2 .projetos{
+header, .section-projetos, .section-contato, .section-tecnologias-div-2 .projetos {
 	background-color: #cccccc;
 }
 
-.projetos {
+body, .projetos, footer {
 	background-color: white;
-}
+} */
