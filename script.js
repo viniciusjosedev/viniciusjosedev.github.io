@@ -33,6 +33,11 @@ const transition = (theme) => {
 			elemento.style.backgroundColor = (theme === 'dark' ? '#222222' : 'white')
 		}
 	})
+	if (theme === 'dark') {
+		document.getElementsByClassName('img-eclipse')[0].src = './images/brilho.png'
+	} else {
+		document.getElementsByClassName('img-eclipse')[0].src = './images/lua-crescente.png'
+	}
 }
 
 const verific = () => {
@@ -40,11 +45,9 @@ const verific = () => {
 	if (storage === 'dark') {	
 		localStorage.setItem('theme', 'light')
 		transition('ligth')
-		document.getElementsByClassName('img-eclipse')[0].src = './images/lua-crescente.png'
 	} else {
 		localStorage.setItem('theme', 'dark')
 		transition('dark')
-		document.getElementsByClassName('img-eclipse')[0].src = './images/brilho.png'
 	}
 }
 
@@ -55,7 +58,10 @@ const theme = () => {
 function init() {
 	if (localStorage.getItem('theme') === null) {
 		localStorage.setItem('theme', 'dark');
-	} theme()
+	} else {
+		transition(localStorage.getItem('theme'))
+	}
+	theme()
 }
 
 window.onload = init()
