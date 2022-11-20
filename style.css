@@ -155,13 +155,13 @@ h2, p{
 	display: flex;
 	flex-direction: column;
 	width: 400px;
-	height: 317.969px;
+	height: auto;
 	border: 5px solid purple;
 	border-radius: 5%;
 	align-items: center;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #222222;
+	background-color: black;
 }
 
 .projetos div{
@@ -169,13 +169,14 @@ h2, p{
 	height: 100%;
 }
 
+
 .projetos div .sobreposicao{
 	font-size: 20px;
 	margin-top: -25px;
 	margin-left: 5px;
 	color: white;
 	font-weight: bolder;
-	text-shadow: 0.1em 0.1em 0.5em black;
+	text-shadow: 0.1em 0.1em 0.2em black;
 }
 
 .projetos div .descricao{
@@ -309,3 +310,49 @@ header, .section-projetos, .section-contato {
 body, .projetos, footer {
 	background-color: white;
 } */
+
+.projetos div div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: auto;
+	height: 60px;
+	align-items: center;
+}
+
+.github, .deploy {
+	width: 80px;
+	height: 40px;
+	border: none;
+	background-color: black;
+	border: black solid 2px;
+	color: white;
+  font-weight: bolder;
+	font-size: 18px;
+	border-radius: 10%;
+}
+
+.github {
+	margin-right: 30px;
+	border: solid 2px purple;
+}
+
+.deploy {
+	margin-right: 30px;
+	border: solid 2px yellow;
+}
+
+.github:hover {
+	cursor: pointer;
+	background-color: purple;
+	width: 82px;
+	height: 42px;
+}
+
+.deploy:hover {
+	cursor: pointer;
+	background-color: yellow;
+	width: 82px;
+	height: 42px;
+	color:black;
+}
