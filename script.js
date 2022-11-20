@@ -15,6 +15,9 @@ const transition = (theme) => {
 	listBlack.forEach((elemento) => {
 		for (let index = 0; index < elemento.length; index += 1) {
 			elemento[index].style.color = (theme === 'dark' ? 'white' : 'black')
+      if (elemento[index].class	= 'sobreposicao') {
+				elemento[index].style.textShadow = `0.1em 0.1em 0.5em ${theme === 'dark' ? 'black': 'white'}`
+			}
 		}
 	})
 	listC.forEach((elemento, i) => {
@@ -23,7 +26,7 @@ const transition = (theme) => {
 	listWhite.forEach((elemento, i) => {
 		if (i === 0) {
 			for (let index = 0; index < elemento.length; index += 1) {
-				if (index >= 4) {
+				if (index >= 3) {
 					elemento[index].style.backgroundColor = (theme === 'dark' ? 'black' : '#cccccc')
 				} else {
 					elemento[index].style.backgroundColor = (theme === 'dark' ? '#222222' : 'white')
