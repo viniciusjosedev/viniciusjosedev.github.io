@@ -65,6 +65,7 @@ function init() {
 		transition(localStorage.getItem('theme'))
 	}
 	theme()
+  
 }
 
 window.onload = init()
