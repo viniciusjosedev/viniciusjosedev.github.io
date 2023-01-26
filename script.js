@@ -26,7 +26,7 @@ const transition = (theme) => {
 	listWhite.forEach((elemento, i) => {
 		if (i === 0) {
 			for (let index = 0; index < elemento.length; index += 1) {
-				if (index >= 3) {
+				if (index >= 4) {
 					elemento[index].style.backgroundColor = (theme === 'dark' ? 'black' : '#cccccc')
 				} else {
 					elemento[index].style.backgroundColor = (theme === 'dark' ? '#222222' : 'white')
