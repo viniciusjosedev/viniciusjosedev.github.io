@@ -1,0 +1,12 @@
+@import '_fonts.scss';
+
+.main {
+	display: flex;
+	flex-flow: column wrap;
+	flex-grow: 5;
+	width: 100%;
+	video {
+		width: 100%;
+	}
+	background-color: red;
+}

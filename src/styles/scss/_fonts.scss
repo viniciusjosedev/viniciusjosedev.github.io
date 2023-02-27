@@ -1,0 +1,11 @@
+@mixin default-fonts() {
+	font-family: 'Press Start 2P', cursive;
+}
+
+@function sizeFonts($size, $context: 16) {
+	@return ($size / $context) * 1em;
+}
+
+@function sizeContainers($size, $context: 1920) {
+	@return ($size / $context) + 1% - 1%;
+}

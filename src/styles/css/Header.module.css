@@ -1,0 +1,66 @@
+* {
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  font-family: "Press Start 2P", cursive;
+  width: 100%;
+}
+
+@media (min-width: 0px) {
+  .header {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(5, 12, 33, 0.4941176471);
+    color: white;
+    font-weight: 700;
+  }
+  .header h1 {
+    font-size: 1.5em;
+    padding: 0.625em;
+  }
+  .header img {
+    width: 40px;
+    background: transparent;
+    padding: 1.25em;
+  }
+}
+@media (min-width: 900px) {
+  .header {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header h1 {
+    font-size: 1.875em;
+    padding: 1.25em;
+  }
+  .header nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .header nav p {
+    font-size: 0.875em;
+    padding: 1.25em;
+    font-weight: 400;
+  }
+  .header nav p:hover {
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .header button {
+    width: 50px;
+  }
+  .header button img {
+    width: 60px;
+  }
+}

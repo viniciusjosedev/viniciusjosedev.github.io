@@ -1,0 +1,29 @@
+@mixin header() {
+	.header {
+		width: 100%;
+		display: flex;
+		flex-grow: 1;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		@content;
+	}
+}
+
+@mixin responsive($size) {
+	@if ($size == m) {
+		@media (min-width: 0px) {
+			@content;
+		}
+	}
+	@else if ($size == t) {
+		@media (min-width: 601px) {
+			@content;
+		}
+	}
+	@else if ($size == d) {
+		@media (min-width: 900px) {
+			@content;
+		}
+	}
+}
