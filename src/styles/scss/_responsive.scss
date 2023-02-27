@@ -1,11 +1,35 @@
-@mixin header() {
-	.header {
-		width: 100%;
+@mixin navegation() {
+	.nav {
+		width: 300px;
 		display: flex;
 		flex-grow: 1;
-		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+		background-color: rgb(24, 24, 24);
+		padding: 10px;
+		border-radius: 50px;
+		position: fixed;
+		top: 80%;
+		a {
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			// width: 50px;
+			// height: 50px;
+			// background: rgb(0,131,242);
+			// background: radial-gradient(circle, rgba(0,131,242,1) 0%, rgba(178,0,242,1) 100%);
+			background-color: black;
+			border-radius: 50%;
+			&.checked {
+			background: rgb(0,131,242);
+			background: radial-gradient(circle, rgba(0,131,242,1) 0%, rgba(178,0,242,1) 100%);
+			}
+			svg {
+				width: 25px;
+				height: 25px;
+				color: white;
+			}
+		}
 		@content;
 	}
 }

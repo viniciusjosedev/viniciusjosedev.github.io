@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from '../styles/css/Home.module.css';
-import backGroundVideo from '../styles/videos/backGroundVideo.mp4';
 
 function Home() {
 
@@ -10,8 +9,8 @@ function Home() {
 
   return (
     <main className={style.main}>
-			{/* <video src={backGroundVideo} onClick={ (e) =>  e.play() } autoplay muted/> */}
-    </main>
+			{/* <Link to="/" activeClass="active" smooth={ true } spy={ true }><BiHomeAlt /></Link> */}
+		</main>
   );
 }
 

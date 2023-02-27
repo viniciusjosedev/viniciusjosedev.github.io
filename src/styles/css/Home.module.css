@@ -3,7 +3,6 @@
   flex-flow: column wrap;
   flex-grow: 5;
   width: 100%;
-  background-color: red;
 }
 .main video {
   width: 100%;

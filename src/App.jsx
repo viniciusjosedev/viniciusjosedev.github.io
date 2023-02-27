@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Header from './components/Header';
+import Navegation from './components/Navegation';
 import WidthProvider from './context/WidthProvider';
 import Home from './pages/Home';
 
@@ -12,18 +12,21 @@ function App() {
         path="/"
         render={({ location, history, match }) => (
           <WidthProvider location={location} history={history} match={match}>
-            <Header />
+            <Navegation />
             <Home />
           </WidthProvider>
         )}
       />
-      {/* <Route
+      <Route
         exact
-        path="/"
+        path="/teste"
         render={({ location, history, match }) => (
-          <Home location={location} history={history} match={match} />
+          <WidthProvider location={location} history={history} match={match}>
+            <Navegation />
+            <Home />
+          </WidthProvider>
         )}
-      /> */}
+      />
     </Switch>
   );
 }

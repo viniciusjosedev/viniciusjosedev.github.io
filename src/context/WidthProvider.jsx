@@ -3,7 +3,7 @@ import WidthContext from './WidthContext';
 
 export default function WidthProvider(props) {
 
-	const [width, setWidth] = useState(0) 
+	const [width, setWidth] = useState(0)
 
 	useEffect(() => {
 		setInterval(() => {

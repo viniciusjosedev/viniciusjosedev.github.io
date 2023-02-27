@@ -1,5 +1,5 @@
 @mixin default-fonts() {
-	font-family: 'Press Start 2P', cursive;
+	font-family: 'Roboto Mono', monospace;
 }
 
 @function sizeFonts($size, $context: 16) {
