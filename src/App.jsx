@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Navegation from './components/Navegation';
 import WidthProvider from './context/WidthProvider';
 import Home from './pages/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -10,11 +11,8 @@ function App() {
       <Route
         exact
         path="/"
-        render={({ location, history, match }) => (
-          <WidthProvider location={location} history={history} match={match}>
-            <Navegation />
-            <Home />
-          </WidthProvider>
+        render={(props) => (
+          <Home { ...props  }/>
         )}
       />
       <Route

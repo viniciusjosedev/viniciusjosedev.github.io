@@ -1,12 +1,80 @@
 @import '_fonts.scss';
+@import '_responsive';
 
-.main {
-	display: flex;
-	flex-flow: column wrap;
-	flex-grow: 5;
-	width: 100%;
-	video {
-		width: 100%;
+@keyframes borderWriterColor{
+	from {
+		border-right-color: transparent;
 	}
-	// background-color: red;
+	to {
+		border-right-color: white;
+	}
+}
+
+@keyframes typing {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 260px;
+	} 
+}
+
+
+@include responsive(m) {
+	.header {
+		// background-color: green;
+		width: 100%;
+		display: flex;
+		h1 {
+			background: rgb(0,145,245);
+			background: linear-gradient(189deg, rgba(0,145,245,1) 0%, rgba(255,0,232,1) 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			-moz-text-fill-color: transparent;
+			font-weight: 700;
+
+		}
+	}
+
+
+	.main {
+		display: flex;
+		flex-flow: column wrap;
+		flex-grow: 5;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		// background-color: red;
+		div {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			height: 200px;
+			// background-color: black;
+			width: 100%;
+			h1 {
+				color: white;
+				// background-color: red;
+				font-size: 20px;
+				background: rgb(255,0,241);
+				background: linear-gradient(189deg, rgba(0,83,245,1) 0%, rgba(255,0,241,1) 100%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-moz-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				-moz-text-fill-color: transparent;
+				width: 0px;
+				// height: 50px;
+				border-right: 2px solid white;
+				white-space: nowrap;
+				overflow: hidden;
+				animation: borderWriterColor 500ms infinite normal, typing 2s steps(40) normal;
+				animation-delay: 5s;
+				animation-fill-mode: forwards;
+				// animation-name: ;
+			}
+		}
+	}
 }

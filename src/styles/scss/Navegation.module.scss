@@ -10,20 +10,23 @@
 body {
 	margin: 0px;
 	@include default-fonts;
-	width: 100%;
+	width: 100vw;
 	background: url('../images/backGroundImage.jpg');
   background-repeat: repeat-x;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 100vh;
 }
 
 @include responsive(m) {
-	@include navegation {
-	}
+	@include navegation
+}
+
+@include responsive(t) {
+	@include navegation
 }
 
 @include responsive(d) {	
-	@include navegation {
-	}
+	@include navegation
 }
