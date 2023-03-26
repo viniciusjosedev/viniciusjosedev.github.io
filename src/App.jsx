@@ -21,7 +21,7 @@ function App() {
         render={({ location, history, match }) => (
           <WidthProvider location={location} history={history} match={match}>
             <Navegation />
-            <Home />
+            {/* <Home /> */}
           </WidthProvider>
         )}
       />

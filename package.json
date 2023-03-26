@@ -17,6 +17,7 @@
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
     "stylelint-order": "^6.0.2",
+    "typeit-react": "^2.6.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

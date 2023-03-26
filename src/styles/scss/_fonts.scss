@@ -1,5 +1,12 @@
-@mixin default-fonts() {
-	font-family: 'Roboto Mono', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@mixin default-fonts($title) {
+	@if ($title == title) {
+		font-family: 'Anton', sans-serif;
+	}
+	@else if ($title == text) {
+		font-family: 'Roboto Mono', monospace;
+	}
 }
 
 @function sizeFonts($size, $context: 16) {

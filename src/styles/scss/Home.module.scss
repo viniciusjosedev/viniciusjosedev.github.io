@@ -1,25 +1,6 @@
 @import '_fonts.scss';
 @import '_responsive';
 
-@keyframes borderWriterColor{
-	from {
-		border-right-color: transparent;
-	}
-	to {
-		border-right-color: white;
-	}
-}
-
-@keyframes typing {
-	from {
-		width: 0px;
-	}
-	to {
-		width: 260px;
-	} 
-}
-
-
 @include responsive(m) {
 	.header {
 		// background-color: green;
@@ -34,10 +15,8 @@
 			-webkit-text-fill-color: transparent;
 			-moz-text-fill-color: transparent;
 			font-weight: 700;
-
 		}
 	}
-
 
 	.main {
 		display: flex;
@@ -45,36 +24,163 @@
 		flex-grow: 5;
 		width: 100%;
 		align-items: center;
-		justify-content: center;
+		// justify-content: center;
 		// background-color: red;
-		div {
-			display: flex;
-			flex-flow: row wrap;
-			align-items: center;
-			height: 200px;
-			// background-color: black;
-			width: 100%;
-			h1 {
-				color: white;
-				// background-color: red;
-				font-size: 20px;
-				background: rgb(255,0,241);
-				background: linear-gradient(189deg, rgba(0,83,245,1) 0%, rgba(255,0,241,1) 100%);
-				background-clip: text;
-				-webkit-background-clip: text;
-				-moz-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				-moz-text-fill-color: transparent;
-				width: 0px;
-				// height: 50px;
-				border-right: 2px solid white;
-				white-space: nowrap;
-				overflow: hidden;
-				animation: borderWriterColor 500ms infinite normal, typing 2s steps(40) normal;
-				animation-delay: 5s;
-				animation-fill-mode: forwards;
-				// animation-name: ;
-			}
+		.teste {
+			background-color: red;
+			margin-top: 50px;
+			@include default-fonts(title);
+			font-size: 25px;
+			font-weight: 700;
+			text-align: center;
+			width: 90%;
+			height: 75px;
 		}
 	}
 }
+
+@include responsive(d) {
+	.header {
+		width: 100%;
+		display: flex;
+		// background-color: blue;
+		align-items: center;
+		justify-content: space-around;
+		img {
+			padding-top: 20px ;
+			padding-bottom: 20px;
+			// background-color: red;
+			width: 120px;
+			// height: 70px;
+		}
+		.glow-on-hover {
+			@include default-fonts(title);
+			width: 150px;
+			height: 50px;
+			border: none;
+			outline: none;
+			color: #fff;
+			background: transparent;
+			cursor: pointer;
+			position: relative;
+			z-index: 0;
+			border-radius: 10px;
+			font-weight: 500;
+			font-size: 16px;
+		}
+	
+		.glow-on-hover:before {
+			content: '';
+			background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+			position: absolute;
+			top: -2px;
+			left:-2px;
+			background-size: 400%;
+			z-index: -1;
+			filter: blur(5px);
+			width: calc(100% + 4px);
+			height: calc(100% + 4px);
+			animation: glowing 20s linear infinite;
+			opacity: 0;
+			transition: opacity .3s ease-in-out;
+			border-radius: 50px;
+		}
+		
+		.glow-on-hover:active {
+				color: #000
+		}
+		
+		.glow-on-hover:active:after {
+				background: transparent;
+		}
+		
+		.glow-on-hover:hover:before {
+				opacity: 1;
+		}
+		
+		.glow-on-hover:after {
+			z-index: -1;
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: rgb(0,145,245);
+			background: linear-gradient(189deg, rgba(0,145,245,1) 0%, rgba(235,0,255,1) 100%);
+			left: 0;
+			top: 0;
+			border-radius: 50px;
+		}
+		
+		@keyframes glowing {
+			0% { background-position: 0 0; }
+			50% { background-position: 400% 0; }
+			100% { background-position: 0 0; }
+		}
+	}
+
+	.main {
+		display: flex;
+		flex-flow: column wrap;
+		flex-grow: 5;
+		width: 100%;
+		align-items: center;
+		// justify-content: center;
+		// background-color: red;
+		section {
+			display: flex;
+			width: 80%;
+			justify-content: space-around;
+			align-items: center;
+			// background-color: red;
+			.divText {
+				display: flex;
+				flex-direction: column;
+				// background-color: blue;
+				width: 40%;
+				height: auto;
+				.spanTitle {
+					// background-color: blue;
+					@include default-fonts(text);
+					color: white;
+					font-size: 38px;
+					font-weight: 700;
+					text-align: left;
+					height: 75px;
+					text-transform: uppercase;
+				}
+				.color {
+					color: #0091f5;
+				}
+				.spanText {
+					@include default-fonts(text);
+					text-align: justify;
+					color: white;
+					font-size: 17px;
+					margin-top: 40px;
+				}
+				button {
+					
+				}
+				.divIcons {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					img {
+						width: 50px;
+						height: 50px;
+						color: white;
+					}
+				}
+			}
+			.iconLogo {
+				width: 350px;
+				height: 350px;
+				border: 5px solid #0091f5;
+				border-radius: 50%;
+				margin-top: 50px;
+			}
+	  }
+	}
+}
+
