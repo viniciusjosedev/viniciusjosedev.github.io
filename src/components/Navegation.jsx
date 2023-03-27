@@ -14,13 +14,13 @@ function Navegation() {
 		<Link to="/" className={ pathname === '/' ? style.checked : null }>
 			<AiFillHome />
 		</Link>
-		<Link to="/teste" className={ pathname === '/teste' ? style.checked : null }>
-			<BiCodeAlt />
-		</Link>
-		<Link>
+		<Link to="/portfolio" className={ pathname === '/portfolio' ? style.checked : null }>
 			<RiLayoutGridFill />
 		</Link>
-		<Link>
+		<Link to="/technologies" className={ pathname === '/technologies' ? style.checked : null }>
+			<BiCodeAlt />
+		</Link>
+		<Link to="/contact" className={ pathname === '/contact' ? style.checked : null }>
 			<AiOutlineMessage />
 		</Link>
 	 </nav>

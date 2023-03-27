@@ -10,19 +10,37 @@ function App() {
     <Switch>
       <Route
         exact
-        path="/"
-        render={(props) => (
-          <Home { ...props  }/>
+        path="/portfolio"
+        render={() => (
+          <Navegation />
         )}
       />
-      <Route
+			<Route
         exact
-        path="/teste"
-        render={({ location, history, match }) => (
-          <WidthProvider location={location} history={history} match={match}>
-            <Navegation />
-            {/* <Home /> */}
-          </WidthProvider>
+        path="/technologies"
+        render={() => (
+          <Navegation />
+        )}
+      />
+			<Route
+        exact
+        path="/contact"
+        render={() => (
+          <Navegation />
+        )}
+      />
+			<Route
+        exact
+        path="/"
+        render={(props) => (
+          <Home { ...props  }/>	
+        )}
+      />
+			<Route
+        exact
+        path="*"
+        render={(props) => (
+          <Home { ...props  }/>
         )}
       />
     </Switch>

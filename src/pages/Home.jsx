@@ -65,8 +65,7 @@ function Home() {
 									.move(24).delete(1).pause(2000)
 								)}	
 							/>
-						) : <span className={style.spanTitle}>Olá! Me chamo
-						 <span className={`${style.spanTitle} ${style.colorFront}`}>Vinicius José</span></span>}
+						) : <span className={style.spanTitle}>Olá! Me chamo <span className={`${style.spanTitle} ${style.colorFront}`}>Vinicius José</span></span>}
 						<TypeIt
 							className={style.spanText}
 							getBeforeInit={(instance) => (
@@ -79,7 +78,16 @@ function Home() {
 						  algumas informações.
 						</TypeIt>
 						<div className={ style.divButtons }>
-						<button type="button" className={style['glow-on-hover']} ><img src={ buttonContact } alt="" /></button>
+						<button
+						type="button" 
+						className={style['glow-on-hover']}
+						onClick={() => {
+							const texto = `Isto é um teste.`
+							window.open(`https://wa.me/5581991550920?text=${encodeURIComponent(texto)}`, '_blank')
+						}}
+						>
+							<img src={ buttonContact } alt="" />
+						</button>
 						<button type="button" className={style['glow-on-hover']} ><img src={ buttonPortfolio } alt="" /></button>
 						</div>
 						<div className={ style.divIcons }>
