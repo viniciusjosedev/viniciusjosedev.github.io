@@ -1,5 +1,4 @@
 import React from 'react';
-// import WidthContext from '../context/WidthContext';
 import style from '../styles/css/Navegation.module.css';
 import { Link } from 'react-router-dom';
 import { AiFillHome, AiOutlineMessage } from 'react-icons/ai';

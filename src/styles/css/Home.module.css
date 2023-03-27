@@ -46,11 +46,14 @@
   }
   .header .glow-on-hover {
     font-family: "Anton", sans-serif;
-    width: 150px;
+    width: 170px;
     height: 50px;
     border: none;
     outline: none;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     cursor: pointer;
     position: relative;
@@ -58,6 +61,9 @@
     border-radius: 10px;
     font-weight: 500;
     font-size: 16px;
+  }
+  .header .glow-on-hover img {
+    width: 170px;
   }
   .header .glow-on-hover:before {
     content: "";
@@ -90,8 +96,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgb(0, 145, 245);
-    background: linear-gradient(189deg, rgb(0, 145, 245) 0%, rgb(235, 0, 255) 100%);
+    background: transparent;
     left: 0;
     top: 0;
     border-radius: 50px;
@@ -119,6 +124,7 @@
     width: 80%;
     justify-content: space-around;
     align-items: center;
+    margin-top: 30px;
   }
   .main section .divText {
     display: flex;
@@ -135,8 +141,11 @@
     height: 75px;
     text-transform: uppercase;
   }
-  .main section .divText .color {
+  .main section .divText .colorFront {
     color: #0091f5;
+  }
+  .main section .divText .colorBack {
+    color: #EB00FF;
   }
   .main section .divText .spanText {
     font-family: "Roboto Mono", monospace;
@@ -145,15 +154,91 @@
     font-size: 17px;
     margin-top: 40px;
   }
+  .main section .divText .divButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .main section .divText .divButtons .glow-on-hover {
+    font-family: "Anton", sans-serif;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .main section .divText .divButtons .glow-on-hover img {
+    width: 150px;
+  }
+  .main section .divText .divButtons .glow-on-hover:before {
+    content: "";
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50px;
+  }
+  .main section .divText .divButtons .glow-on-hover:active {
+    color: #000;
+  }
+  .main section .divText .divButtons .glow-on-hover:active:after {
+    background: transparent;
+  }
+  .main section .divText .divButtons .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  .main section .divText .divButtons .glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+  }
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
   .main section .divText .divIcons {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    gap: 10px;
   }
   .main section .divText .divIcons img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     color: white;
   }
   .main section .iconLogo {
@@ -161,6 +246,5 @@
     height: 350px;
     border: 5px solid #0091f5;
     border-radius: 50%;
-    margin-top: 50px;
   }
 }

@@ -8,6 +8,9 @@ import iconLogo from '../styles/images/icon-logo.svg';
 import animationGeneration from '../helpers/animationGeneration';
 import iconGithub from '../styles/images/iconGithub.png';
 import iconLinkedin from '../styles/images/iconLinkedin.png';
+import logoButton from '../styles/images/logoButton.svg';
+import buttonContact from '../styles/images/buttonContact.svg';
+import buttonPortfolio from '../styles/images/buttonPortfolio.svg';
 
 
 function Home() {
@@ -43,7 +46,12 @@ function Home() {
 			<Navegation />
 			<header className={ style.header }>
 				<img src={iconLogo} alt="" />
-				<button className={style['glow-on-hover']}>Trabalhe Comigo</button>
+				<button
+				className={style['glow-on-hover']} 
+				type="button"
+				>
+					<img src={logoButton} alt=""/>
+				</button>
 			</header>
 			<main className={style.main}>
 				<section>
@@ -52,28 +60,42 @@ function Home() {
 							<TypeIt
 								className={style.spanTitle}
 								getBeforeInit={(instance) => (
-									instance.options({ speed: 30, deleteSpeed: 30 }).pause(500).type(`Ol, me chamo <span class="${style.spanTitle} ${style.color}">Vinicius José</span>`)
+									instance.options({ speed: 30, deleteSpeed: 30 }).pause(500).type(`Ol, me chamo <span class="${style.spanTitle} ${style.colorFront}">Vinicius José</span>`)
 									.pause(750).move(-24).type('á').move(24).type('!').pause(750).move(-24).delete(1).type('!')
 									.move(24).delete(1).pause(2000)
 								)}	
 							/>
-						) : <span className={style.spanTitle}>Olá! Me chamo <span className={`${style.spanTitle} ${style.color}`}>Vinicius José</span></span>}
+						) : <span className={style.spanTitle}>Olá! Me chamo
+						 <span className={`${style.spanTitle} ${style.colorFront}`}>Vinicius José</span></span>}
 						<TypeIt
 							className={style.spanText}
 							getBeforeInit={(instance) => (
 								animationGeneration(instance, style)
 							)}
 							options={ { speed: 5, startDelay: !checkedLogin ? 8000 : 500, deleteSpeed: 5 } }>
-							Tenho 20 anos e sou um desenvolvedor <span className={`${style.color}`}>Front-End</span>. 
+							Tenho 20 anos e sou um desenvolvedor <span className={`${style.colorFront}`}>Front-End</span>. 
 							Atualmente estou formado no módulo de fundamentos Front-End e no curso de Desenvolvimento 
 							Web da Trybe. Aqui você encontra alguns dos principais projetos feito por mim e mais
 						  algumas informações.
 						</TypeIt>
-						{/* <button type="button">Fale comigo</button>
+						<div className={ style.divButtons }>
+						<button type="button" className={style['glow-on-hover']} ><img src={ buttonContact } alt="" /></button>
+						<button type="button" className={style['glow-on-hover']} ><img src={ buttonPortfolio } alt="" /></button>
+						</div>
 						<div className={ style.divIcons }>
-							<img src={iconGithub} alt="" />
-							<img src={iconLinkedin} alt="" />
-						</div> */}
+							<a 
+							href="https://github.com/viniciusjosedev" 
+							target="blank"
+							>
+								<img src={iconGithub} alt="Icone do GitHub" />
+							</a>
+							<a 
+							href="https://www.linkedin.com/in/viniciusjosedev/" 
+							target="blank"
+							>
+								<img src={iconLinkedin} alt="Icone do Linkedin" />
+							</a>
+						</div>
 					</div>
 				<img className={ style.iconLogo } src="https://avatars.githubusercontent.com/u/113393364?v=4" alt="" />
 				</section>

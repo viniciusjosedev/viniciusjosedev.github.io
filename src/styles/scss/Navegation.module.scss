@@ -27,7 +27,7 @@ body {
 		flex-grow: 1;
 		justify-content: space-between;
 		align-items: center;
-		background-color: rgb(24, 24, 24);
+		background-color: rgba(0, 0, 0, 0.144);
 		padding: 10px;
 		border-radius: 50px;
 		position: fixed;
@@ -36,7 +36,7 @@ body {
 			padding: 10px;
 			display: flex;
 			justify-content: center;
-			background-color: black;
+			background-color: transparent;
 			border-radius: 50%;
 			&.checked {
 			background: rgb(0,131,242);

@@ -1,5 +1,6 @@
 @import '_fonts.scss';
 @import '_responsive';
+@import '_helpers';
 
 @include responsive(m) {
 	.header {
@@ -24,8 +25,6 @@
 		flex-grow: 5;
 		width: 100%;
 		align-items: center;
-		// justify-content: center;
-		// background-color: red;
 		.teste {
 			background-color: red;
 			margin-top: 50px;
@@ -49,73 +48,9 @@
 		img {
 			padding-top: 20px ;
 			padding-bottom: 20px;
-			// background-color: red;
 			width: 120px;
-			// height: 70px;
 		}
-		.glow-on-hover {
-			@include default-fonts(title);
-			width: 150px;
-			height: 50px;
-			border: none;
-			outline: none;
-			color: #fff;
-			background: transparent;
-			cursor: pointer;
-			position: relative;
-			z-index: 0;
-			border-radius: 10px;
-			font-weight: 500;
-			font-size: 16px;
-		}
-	
-		.glow-on-hover:before {
-			content: '';
-			background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-			position: absolute;
-			top: -2px;
-			left:-2px;
-			background-size: 400%;
-			z-index: -1;
-			filter: blur(5px);
-			width: calc(100% + 4px);
-			height: calc(100% + 4px);
-			animation: glowing 20s linear infinite;
-			opacity: 0;
-			transition: opacity .3s ease-in-out;
-			border-radius: 50px;
-		}
-		
-		.glow-on-hover:active {
-				color: #000
-		}
-		
-		.glow-on-hover:active:after {
-				background: transparent;
-		}
-		
-		.glow-on-hover:hover:before {
-				opacity: 1;
-		}
-		
-		.glow-on-hover:after {
-			z-index: -1;
-			content: '';
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background: rgb(0,145,245);
-			background: linear-gradient(189deg, rgba(0,145,245,1) 0%, rgba(235,0,255,1) 100%);
-			left: 0;
-			top: 0;
-			border-radius: 50px;
-		}
-		
-		@keyframes glowing {
-			0% { background-position: 0 0; }
-			50% { background-position: 400% 0; }
-			100% { background-position: 0 0; }
-		}
+		@include styledButton(170);
 	}
 
 	.main {
@@ -132,6 +67,8 @@
 			justify-content: space-around;
 			align-items: center;
 			// background-color: red;
+			margin-top: 30px;
+			// justify-items: center;
 			.divText {
 				display: flex;
 				flex-direction: column;
@@ -148,8 +85,11 @@
 					height: 75px;
 					text-transform: uppercase;
 				}
-				.color {
+				.colorFront {
 					color: #0091f5;
+				}
+				.colorBack {
+					color: #EB00FF;
 				}
 				.spanText {
 					@include default-fonts(text);
@@ -158,7 +98,14 @@
 					font-size: 17px;
 					margin-top: 40px;
 				}
-				button {
+				.divButtons {
+					display: flex;
+					width: 100%;
+					// background-color: red;
+					justify-content: space-around;
+					margin-top: 20px;
+					margin-bottom: 20px;
+					@include styledButton(150);
 					
 				}
 				.divIcons {
@@ -166,9 +113,11 @@
 					align-items: center;
 					justify-content: center;
 					width: 100%;
+					// background-color: blue;
+					gap: 10px;
 					img {
-						width: 50px;
-						height: 50px;
+						width: 40px;
+						height: 40px;
 						color: white;
 					}
 				}
@@ -178,7 +127,7 @@
 				height: 350px;
 				border: 5px solid #0091f5;
 				border-radius: 50%;
-				margin-top: 50px;
+				// margin-top: 50px;
 			}
 	  }
 	}
