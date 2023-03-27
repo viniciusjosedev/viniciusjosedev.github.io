@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Navegation from './components/Navegation';
-import WidthProvider from './context/WidthProvider';
 import Home from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Loading from './components/Loading';
 
 function App() {
   return (
@@ -31,9 +31,16 @@ function App() {
       />
 			<Route
         exact
-        path="/"
+        path="/home"
         render={(props) => (
-          <Home { ...props  }/>	
+          <Home { ...props } />
+        )}
+      />
+			<Route
+        exact
+        path="/"
+        render={() => (
+          <Loading />
         )}
       />
 			<Route

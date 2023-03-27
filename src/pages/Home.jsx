@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import style from '../styles/css/Home.module.css';
-import { Spinner } from 'reactstrap';
 import Navegation from '../components/Navegation';
 import TypeIt from 'typeit-react';
 import WidthContext from '../context/WidthContext';
@@ -11,12 +10,14 @@ import iconLinkedin from '../styles/images/iconLinkedin.png';
 import logoButton from '../styles/images/logoButton.svg';
 import buttonContact from '../styles/images/buttonContact.svg';
 import buttonPortfolio from '../styles/images/buttonPortfolio.svg';
+import { useHistory } from 'react-router-dom';
 
 
 function Home() {
-	const [loading, setLoading] = useState(false);
   const [awaitAnimation, setAwaitAnimation] = useState(true);
 	const { checkedLogin, setCheckedLogin } = useContext(WidthContext);
+	const { push } = useHistory();
+
 	// Simulação de requisição para API
 	useEffect(() => {
 		async function init() {
@@ -26,7 +27,6 @@ function Home() {
 			else {
 				const timer = Math.random() * 5000 + 2000;
 				setTimeout(() => {
-					setLoading(false);
 					setCheckedLogin(true)
 					setAwaitAnimation(true)
 				}, timer);
@@ -35,11 +35,11 @@ function Home() {
 		init();
 	}, [])
 
-	if (loading && !checkedLogin) {
-		return (
-			<Spinner style={ { color: 'white' } }/>
-		)
+	const handleClick = () => {
+		const texto = `Isto é um teste.`
+		window.open(`https://wa.me/5581991550920?text=${encodeURIComponent(texto)}`, '_blank')
 	}
+
 
   return (
 		<>
@@ -49,6 +49,7 @@ function Home() {
 				<button
 				className={style['glow-on-hover']} 
 				type="button"
+				onClick={ handleClick }
 				>
 					<img src={logoButton} alt=""/>
 				</button>
@@ -71,7 +72,7 @@ function Home() {
 							getBeforeInit={(instance) => (
 								animationGeneration(instance, style)
 							)}
-							options={ { speed: 5, startDelay: !checkedLogin ? 8000 : 500, deleteSpeed: 5 } }>
+							options={ { speed: 5, startDelay: !checkedLogin ? 8200 : 500, deleteSpeed: 5 } }>
 							Tenho 20 anos e sou um desenvolvedor <span className={`${style.colorFront}`}>Front-End</span>. 
 							Atualmente estou formado no módulo de fundamentos Front-End e no curso de Desenvolvimento 
 							Web da Trybe. Aqui você encontra alguns dos principais projetos feito por mim e mais
@@ -81,14 +82,17 @@ function Home() {
 						<button
 						type="button" 
 						className={style['glow-on-hover']}
-						onClick={() => {
-							const texto = `Isto é um teste.`
-							window.open(`https://wa.me/5581991550920?text=${encodeURIComponent(texto)}`, '_blank')
-						}}
+						onClick={ handleClick }
 						>
 							<img src={ buttonContact } alt="" />
 						</button>
-						<button type="button" className={style['glow-on-hover']} ><img src={ buttonPortfolio } alt="" /></button>
+						<button 
+						type="button" 
+						className={style['glow-on-hover']}
+						onClick={ () => push('/portfolio') }
+						>
+							<img src={ buttonPortfolio } alt="" />
+						</button>
 						</div>
 						<div className={ style.divIcons }>
 							<a 

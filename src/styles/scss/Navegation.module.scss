@@ -1,5 +1,6 @@
 @import '_fonts.scss';
 @import './_responsive.scss';
+@import './helpers';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
 
 
@@ -8,6 +9,7 @@
 }
 
 body {
+	// @include animationMain();
 	margin: 0px;
 	@include default-fonts(title);
 	width: 100vw;

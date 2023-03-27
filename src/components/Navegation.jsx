@@ -11,7 +11,7 @@ function Navegation() {
 
   return (
 		<nav className={style.nav}>
-		<Link to="/" className={ pathname === '/' ? style.checked : null }>
+		<Link to="/home" className={ pathname === '/home' ? style.checked : null }>
 			<AiFillHome />
 		</Link>
 		<Link to="/portfolio" className={ pathname === '/portfolio' ? style.checked : null }>
