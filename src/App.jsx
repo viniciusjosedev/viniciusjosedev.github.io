@@ -4,6 +4,7 @@ import Navegation from './components/Navegation';
 import Home from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Loading from './components/Loading';
+import Projects from './pages/Projects';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         exact
         path="/projects"
         render={() => (
-          <Navegation />
+          <Projects />
         )}
       />
 			<Route
