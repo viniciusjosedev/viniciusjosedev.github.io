@@ -72,7 +72,7 @@ function Home() {
 							getBeforeInit={(instance) => (
 								animationGeneration(instance, style)
 							)}
-							options={ { speed: 5, startDelay: !checkedLogin ? 8200 : 500, deleteSpeed: 5 } }>
+							options={ { speed: 5, startDelay: !checkedLogin ? 9000 : 500, deleteSpeed: 5 } }>
 							Tenho 20 anos e sou um desenvolvedor <span className={`${style.colorFront}`}>Front-End</span>. 
 							Atualmente estou formado no módulo de fundamentos Front-End e no curso de Desenvolvimento 
 							Web da Trybe. Aqui você encontra alguns dos principais projetos feito por mim e mais
@@ -112,6 +112,8 @@ function Home() {
 				<img className={ style.iconLogo } src="https://avatars.githubusercontent.com/u/113393364?v=4" alt="" />
 				</section>
 			</main>
+			<div className={ style.divSpace }>
+			</div>
 		</>
 	);
 }

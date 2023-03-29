@@ -8,60 +8,14 @@
 	margin: 0px;
 }
 
-body {
-	// @include animationMain();
-	margin: 0px;
-	@include default-fonts(title);
-	width: 100vw;
-	background: url('../images/backgroundImage.svg');
-  background-repeat: no-repeat;
-	background-size: cover;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
-}
-
-@mixin navegation() {
-	.nav {
-		width: 300px;
-		display: flex;
-		flex-grow: 1;
-		justify-content: space-between;
-		align-items: center;
-		background-color: rgba(0, 0, 0, 0.144);
-		padding: 10px;
-		border-radius: 50px;
-		position: fixed;
-		top: 85%;
-		a {
-			padding: 10px;
-			display: flex;
-			justify-content: center;
-			background-color: transparent;
-			border-radius: 50%;
-			&.checked {
-			background: rgb(0,131,242);
-			background: radial-gradient(circle, rgba(0,131,242,1) 0%, rgba(178,0,242,1) 100%);
-			}
-			svg {
-				width: 25px;
-				height: 25px;
-				color: white;
-			}
-		}
-		@content;
-	}
-}
-
 @include responsive(m) {
-	@include navegation
+	@include navegation(25);
 }
 
 @include responsive(t) {
-	@include navegation
+	@include navegation(35);
 }
 
 @include responsive(d) {	
-	@include navegation
+	@include navegation(25);
 }

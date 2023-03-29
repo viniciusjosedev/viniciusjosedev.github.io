@@ -10,7 +10,7 @@ function App() {
     <Switch>
       <Route
         exact
-        path="/portfolio"
+        path="/projects"
         render={() => (
           <Navegation />
         )}

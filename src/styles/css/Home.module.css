@@ -1,18 +1,106 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @media (max-width: 600px) {
+  body {
+    margin: 0px;
+    font-family: "Anton", sans-serif;
+    width: 100vw;
+    background: url("../images/backgroundImageMobile.svg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
   .header {
+    animation: animationFromMain;
+    animation-duration: 3s;
     width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
-  .header h1 {
-    background: rgb(0, 145, 245);
-    background: linear-gradient(189deg, rgb(0, 145, 245) 0%, rgb(255, 0, 232) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    font-weight: 700;
+  @keyframes animationFromMain {
+    from {
+      opacity: 0;
+      margin-top: 10px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  .header img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 105px;
+  }
+  .header .glow-on-hover {
+    font-family: "Anton", sans-serif;
+    width: 170px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .header .glow-on-hover img {
+    width: 170px;
+  }
+  .header .glow-on-hover:before {
+    content: "";
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50px;
+  }
+  .header .glow-on-hover:active {
+    color: #000;
+  }
+  .header .glow-on-hover:active:after {
+    background: transparent;
+  }
+  .header .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  .header .glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+  }
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
   }
   .main {
     display: flex;
@@ -20,19 +108,433 @@
     flex-grow: 5;
     width: 100%;
     align-items: center;
+    justify-content: center;
   }
-  .main .teste {
-    background-color: red;
-    margin-top: 50px;
-    font-family: "Anton", sans-serif;
-    font-size: 25px;
+  .main section {
+    animation: animationFromMain;
+    animation-duration: 3s;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+  @keyframes animationFromMain {
+    from {
+      opacity: 0;
+      margin-top: 10px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  .main section .divText {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: auto;
+  }
+  .main section .divText .spanTitle {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 30px;
     font-weight: 700;
-    text-align: center;
-    width: 90%;
+    text-align: left;
     height: 75px;
+    text-transform: uppercase;
+  }
+  .main section .divText .colorFront {
+    color: #0091f5;
+  }
+  .main section .divText .colorBack {
+    color: #EB00FF;
+  }
+  .main section .divText .spanText {
+    font-family: "Roboto Mono", monospace;
+    text-align: justify;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .main section .divText .divButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .main section .divText .divButtons .glow-on-hover {
+    font-family: "Anton", sans-serif;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .main section .divText .divButtons .glow-on-hover img {
+    width: 150px;
+  }
+  .main section .divText .divButtons .glow-on-hover:before {
+    content: "";
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50px;
+  }
+  .main section .divText .divButtons .glow-on-hover:active {
+    color: #000;
+  }
+  .main section .divText .divButtons .glow-on-hover:active:after {
+    background: transparent;
+  }
+  .main section .divText .divButtons .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  .main section .divText .divButtons .glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+  }
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  .main section .divText .divIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+  .main section .divText .divIcons img {
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    color: white;
+  }
+  .main section .iconLogo {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #0091f5;
+    border-radius: 50%;
+    display: none;
+  }
+  .divSpace {
+    display: flex;
+    flex-flow: column wrap;
+    flex-grow: 5;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 125px;
+  }
+}
+@media (min-width: 601px) {
+  body {
+    margin: 0px;
+    font-family: "Anton", sans-serif;
+    width: 100vw;
+    background: url("../images/backgroundImageDesktop.svg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  .header {
+    animation: animationFromMain;
+    animation-duration: 3s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  @keyframes animationFromMain {
+    from {
+      opacity: 0;
+      margin-top: 10px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  .header img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 120px;
+  }
+  .header .glow-on-hover {
+    font-family: "Anton", sans-serif;
+    width: 170px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .header .glow-on-hover img {
+    width: 170px;
+  }
+  .header .glow-on-hover:before {
+    content: "";
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50px;
+  }
+  .header .glow-on-hover:active {
+    color: #000;
+  }
+  .header .glow-on-hover:active:after {
+    background: transparent;
+  }
+  .header .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  .header .glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+  }
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  .main {
+    display: flex;
+    flex-flow: column wrap;
+    flex-grow: 5;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .main section {
+    animation: animationFromMain;
+    animation-duration: 3s;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @keyframes animationFromMain {
+    from {
+      opacity: 0;
+      margin-top: 10px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  .main section .divText {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+  }
+  .main section .divText .spanTitle {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: left;
+    height: 75px;
+    text-transform: uppercase;
+  }
+  .main section .divText .colorFront {
+    color: #0091f5;
+  }
+  .main section .divText .colorBack {
+    color: #EB00FF;
+  }
+  .main section .divText .spanText {
+    font-family: "Roboto Mono", monospace;
+    text-align: justify;
+    color: white;
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  .main section .divText .divButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .main section .divText .divButtons .glow-on-hover {
+    font-family: "Anton", sans-serif;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .main section .divText .divButtons .glow-on-hover img {
+    width: 150px;
+  }
+  .main section .divText .divButtons .glow-on-hover:before {
+    content: "";
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50px;
+  }
+  .main section .divText .divButtons .glow-on-hover:active {
+    color: #000;
+  }
+  .main section .divText .divButtons .glow-on-hover:active:after {
+    background: transparent;
+  }
+  .main section .divText .divButtons .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  .main section .divText .divButtons .glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+  }
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  .main section .divText .divIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+  .main section .divText .divIcons img {
+    width: 40px;
+    height: 40px;
+    color: white;
+  }
+  .main section .iconLogo {
+    width: 250px;
+    height: 250px;
+    border: 5px solid #0091f5;
+    border-radius: 50%;
+  }
+  .divSpace {
+    display: flex;
+    flex-flow: column wrap;
+    flex-grow: 5;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
   }
 }
 @media (min-width: 901px) {
+  body {
+    margin: 0px;
+    font-family: "Anton", sans-serif;
+    width: 100vw;
+    background: url("../images/backgroundImageDesktop.svg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
   .header {
     animation: animationFromMain;
     animation-duration: 3s;
@@ -270,5 +772,14 @@
     height: 320px;
     border: 5px solid #0091f5;
     border-radius: 50%;
+  }
+  .divSpace {
+    display: flex;
+    flex-flow: column wrap;
+    flex-grow: 5;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
   }
 }

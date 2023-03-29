@@ -4,19 +4,6 @@
   margin: 0px;
 }
 
-body {
-  margin: 0px;
-  font-family: "Anton", sans-serif;
-  width: 100vw;
-  background: url("../images/backgroundImage.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-}
-
 @media (max-width: 600px) {
   .nav {
     width: 300px;
@@ -47,7 +34,7 @@ body {
     color: white;
   }
 }
-@media (max-width: 900px) {
+@media (min-width: 601px) {
   .nav {
     width: 300px;
     display: flex;
@@ -72,8 +59,8 @@ body {
     background: radial-gradient(circle, rgb(0, 131, 242) 0%, rgb(178, 0, 242) 100%);
   }
   .nav a svg {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     color: white;
   }
 }

@@ -5,7 +5,7 @@
 		}
 	}
 	@else if ($size == t) {
-		@media (max-width: 900px) {
+		@media (min-width: 601px) {
 			@content;
 		}
 	}

@@ -3,20 +3,21 @@
 @import '_helpers';
 
 @include responsive(m) {
+	@include bodyGenerator('../images/backgroundImageMobile.svg');
+
 	.header {
-		// background-color: green;
+		@include animationMain();
 		width: 100%;
 		display: flex;
-		h1 {
-			background: rgb(0,145,245);
-			background: linear-gradient(189deg, rgba(0,145,245,1) 0%, rgba(255,0,232,1) 100%);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-moz-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			-moz-text-fill-color: transparent;
-			font-weight: 700;
+		// background-color: blue;
+		align-items: center;
+		justify-content: space-around;
+		img {
+			padding-top: 20px ;
+			padding-bottom: 20px;
+			width: 105px;
 		}
+		@include styledButton(170);
 	}
 
 	.main {
@@ -25,20 +26,208 @@
 		flex-grow: 5;
 		width: 100%;
 		align-items: center;
-		.teste {
-			background-color: red;
-			margin-top: 50px;
-			@include default-fonts(title);
-			font-size: 25px;
-			font-weight: 700;
-			text-align: center;
-			width: 90%;
-			height: 75px;
+		justify-content: center;
+		// background-color: red;
+		section {
+			@include animationMain();
+			display: flex;
+			width: 80%;
+			justify-content: space-around;
+			align-items: center;
+			margin-top: 20px;
+			// justify-content: center;
+			// background-color: red;
+			.divText {
+				display: flex;
+				flex-flow: column wrap;
+				// background-color: blue;
+				width: 100%;
+				height: auto;
+				// align-items: center;
+				// justify-content: center;
+				.spanTitle {
+					// background-color: purple;
+					@include default-fonts(text);
+					color: white;
+					font-size: 30px;
+					font-weight: 700;
+					text-align: left;
+					height: 75px;
+					text-transform: uppercase;
+				}
+				.colorFront {
+					color: #0091f5;
+				}
+				.colorBack {
+					color: #EB00FF;
+				}
+				.spanText {
+					@include default-fonts(text);
+					text-align: justify;
+					color: white;
+					font-size: 20px;
+					margin-top: 20px;
+				}
+				.divButtons {
+					display: flex;
+					width: 100%;
+					// background-color: yellow;
+					justify-content: space-around;
+					margin-top: 20px;
+					margin-bottom: 10px;
+					@include styledButton(150);
+					
+				}
+				.divIcons {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					// background-color: black;
+					gap: 10px;
+					img {
+						margin-bottom: 5px;
+						width: 40px;
+						height: 40px;
+						color: white;
+					}
+				}
+			}
+			.iconLogo {
+				width: 100px;
+				height: 100px;
+				border: 5px solid #0091f5;
+				border-radius: 50%;
+				// margin-top: 50px;
+				display: none;
+			}
+	  }
+	}
+
+	.divSpace {
+		// background-color: red;
+		display: flex;
+		flex-flow: column wrap;
+		flex-grow: 5;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		// height: 200px;
+		padding-top: 125px
+	}
+}
+
+@include responsive(t) {
+	@include bodyGenerator('../images/backgroundImageDesktop.svg');
+
+	.header {
+		@include animationMain();
+		width: 100%;
+		display: flex;
+		// background-color: blue;
+		align-items: center;
+		justify-content: space-around;
+		img {
+			padding-top: 20px ;
+			padding-bottom: 20px;
+			width: 120px;
 		}
+		@include styledButton(170);
+	}
+
+	.main {
+		display: flex;
+		flex-flow: column wrap;
+		flex-grow: 5;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		margin-top: 50px;
+		section {
+			@include animationMain();
+			display: flex;
+			width: 80%;
+			justify-content: space-around;
+			align-items: center;
+			// background-color: yellow;
+			.divText {
+				display: flex;
+				flex-direction: column;
+				// background-color: blue;
+				width: 50%;
+				height: auto;
+				.spanTitle {
+					// background-color: blue;
+					@include default-fonts(text);
+					color: white;
+					font-size: 35px;
+					font-weight: 700;
+					text-align: left;
+					height: 75px;
+					text-transform: uppercase;
+				}
+				.colorFront {
+					color: #0091f5;
+				}
+				.colorBack {
+					color: #EB00FF;
+				}
+				.spanText {
+					@include default-fonts(text);
+					text-align: justify;
+					color: white;
+					font-size: 20px;
+					margin-top: 40px;
+				}
+				.divButtons {
+					display: flex;
+					width: 100%;
+					// background-color: red;
+					justify-content: space-around;
+					margin-top: 20px;
+					margin-bottom: 20px;
+					@include styledButton(150);
+					
+				}
+				.divIcons {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					// background-color: blue;
+					gap: 10px;
+					img {
+						width: 40px;
+						height: 40px;
+						color: white;
+					}
+				}
+			}
+			.iconLogo {
+				width: 250px;
+				height: 250px;
+				border: 5px solid #0091f5;
+				border-radius: 50%;
+				// margin-top: 50px;
+			}
+	  }
+	}
+	.divSpace {
+		// background-color: red;
+		display: flex;
+		flex-flow: column wrap;
+		flex-grow: 5;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		padding-top: 50px
 	}
 }
 
 @include responsive(d) {
+
+	@include bodyGenerator('../images/backgroundImageDesktop.svg');
+
 	.header {
 		@include animationMain();
 		width: 100%;
@@ -128,6 +317,16 @@
 				// margin-top: 50px;
 			}
 	  }
+	}
+	.divSpace {
+		// background-color: red;
+		display: flex;
+		flex-flow: column wrap;
+		flex-grow: 5;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		height: 200px;
 	}
 }
 

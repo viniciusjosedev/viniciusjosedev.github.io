@@ -14,7 +14,7 @@ function Navegation() {
 		<Link to="/home" className={ pathname === '/home' ? style.checked : null }>
 			<AiFillHome />
 		</Link>
-		<Link to="/portfolio" className={ pathname === '/portfolio' ? style.checked : null }>
+		<Link to="/projects" className={ pathname === '/projects' ? style.checked : null }>
 			<RiLayoutGridFill />
 		</Link>
 		<Link to="/technologies" className={ pathname === '/technologies' ? style.checked : null }>
