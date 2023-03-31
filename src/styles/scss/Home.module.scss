@@ -102,18 +102,7 @@
 				display: none;
 			}
 	  }
-	}
-
-	.divSpace {
-		// background-color: red;
-		display: flex;
-		flex-flow: column wrap;
-		flex-grow: 5;
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-		// height: 200px;
-		padding-top: 125px
+		margin-bottom: 200px;
 	}
 }
 
@@ -143,6 +132,7 @@
 		align-items: center;
 		justify-content: center;
 		margin-top: 50px;
+		margin-bottom: 150px;
 		section {
 			@include animationMain();
 			display: flex;
@@ -210,17 +200,10 @@
 				border-radius: 50%;
 				// margin-top: 50px;
 			}
-	  }
+		}
 	}
 	.divSpace {
-		// background-color: red;
-		display: flex;
-		flex-flow: column wrap;
-		flex-grow: 5;
 		width: 100%;
-		align-items: center;
-		justify-content: center;
-		padding-top: 50px
 	}
 }
 
@@ -232,7 +215,6 @@
 		@include animationMain();
 		width: 100%;
 		display: flex;
-		// background-color: blue;
 		align-items: center;
 		justify-content: space-around;
 		img {
@@ -241,6 +223,7 @@
 			width: 120px;
 		}
 		@include styledButton(170);
+		margin-bottom: 0px;
 	}
 
 	.main {
@@ -250,6 +233,8 @@
 		width: 100%;
 		align-items: center;
 		justify-content: center;
+		margin-top: 50px;
+		margin-bottom: 150px;
 		section {
 			@include animationMain();
 			display: flex;
@@ -259,11 +244,9 @@
 			.divText {
 				display: flex;
 				flex-direction: column;
-				// background-color: blue;
 				width: 40%;
 				height: auto;
 				.spanTitle {
-					// background-color: blue;
 					@include default-fonts(text);
 					color: white;
 					font-size: 38px;
@@ -314,19 +297,10 @@
 				height: 320px;
 				border: 5px solid #0091f5;
 				border-radius: 50%;
-				// margin-top: 50px;
 			}
 	  }
 	}
 	.divSpace {
-		// background-color: red;
-		display: flex;
-		flex-flow: column wrap;
-		flex-grow: 5;
 		width: 100%;
-		align-items: center;
-		justify-content: center;
-		height: 200px;
 	}
 }
-

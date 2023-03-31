@@ -1,11 +1,11 @@
 @mixin responsive($size) {
 	@if ($size == m) {
-		@media (max-width: 600px) {
+		@media (min-width: 0px) and (max-width: 682px) {
 			@content;
 		}
 	}
 	@else if ($size == t) {
-		@media (min-width: 601px) {
+		@media (min-width: 683px) and (max-width: 900px) {
 			@content;
 		}
 	}

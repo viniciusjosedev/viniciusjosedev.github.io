@@ -73,8 +73,6 @@
 }
 
 @mixin animationMain() {
-	// opacity: 0;
-	// margin-top: 100px;
 	animation: animationFromMain;
 	animation-duration: 3s;
 
@@ -94,13 +92,13 @@
 
 @mixin bodyGenerator($url) {
 	body {
-		// @include animationMain();
-		margin: 0px;
 		@include default-fonts(title);
-		width: 100vw;
+		margin: 0px;
+		width: 100%;
 		background: url($url);
-		// background-repeat: no-repeat;
 		background-size: cover;
+		background-repeat: repeat;
+		background-attachment: fixed;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

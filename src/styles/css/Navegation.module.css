@@ -4,7 +4,7 @@
   margin: 0px;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 682px) {
   .nav {
     width: 300px;
     display: flex;
@@ -34,7 +34,7 @@
     color: white;
   }
 }
-@media (min-width: 601px) {
+@media (min-width: 683px) and (max-width: 900px) {
   .nav {
     width: 300px;
     display: flex;

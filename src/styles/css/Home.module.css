@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@media (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 682px) {
   body {
-    margin: 0px;
     font-family: "Anton", sans-serif;
-    width: 100vw;
+    margin: 0px;
+    width: 100%;
     background: url("../images/backgroundImageMobile.svg");
     background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,6 +111,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    margin-bottom: 200px;
   }
   .main section {
     animation: animationFromMain;
@@ -252,23 +255,16 @@
     border-radius: 50%;
     display: none;
   }
-  .divSpace {
-    display: flex;
-    flex-flow: column wrap;
-    flex-grow: 5;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding-top: 125px;
-  }
 }
-@media (min-width: 601px) {
+@media (min-width: 683px) and (max-width: 900px) {
   body {
-    margin: 0px;
     font-family: "Anton", sans-serif;
-    width: 100vw;
+    margin: 0px;
+    width: 100%;
     background: url("../images/backgroundImageDesktop.svg");
     background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -373,6 +369,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    margin-bottom: 150px;
   }
   .main section {
     animation: animationFromMain;
@@ -514,22 +511,18 @@
     border-radius: 50%;
   }
   .divSpace {
-    display: flex;
-    flex-flow: column wrap;
-    flex-grow: 5;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
   }
 }
 @media (min-width: 901px) {
   body {
-    margin: 0px;
     font-family: "Anton", sans-serif;
-    width: 100vw;
+    margin: 0px;
+    width: 100%;
     background: url("../images/backgroundImageDesktop.svg");
     background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -542,6 +535,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 0px;
   }
   @keyframes animationFromMain {
     from {
@@ -633,6 +627,8 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 150px;
   }
   .main section {
     animation: animationFromMain;
@@ -774,12 +770,6 @@
     border-radius: 50%;
   }
   .divSpace {
-    display: flex;
-    flex-flow: column wrap;
-    flex-grow: 5;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
   }
 }

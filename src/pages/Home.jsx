@@ -12,7 +12,6 @@ import buttonContact from '../styles/images/buttonContact.svg';
 import buttonPortfolio from '../styles/images/buttonPortfolio.svg';
 import { useHistory } from 'react-router-dom';
 
-
 function Home() {
   const [awaitAnimation, setAwaitAnimation] = useState(true);
 	const { checkedLogin, setCheckedLogin } = useContext(WidthContext);
@@ -113,6 +112,7 @@ function Home() {
 				</section>
 			</main>
 			<div className={ style.divSpace }>
+				<p />
 			</div>
 		</>
 	);
