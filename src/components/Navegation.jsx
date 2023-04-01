@@ -14,8 +14,11 @@ function Navegation() {
 		<Link to="/home" className={ pathname === '/home' ? style.checked : null }>
 			<AiFillHome />
 		</Link>
-		<Link to="/projects" className={ pathname === '/projects' ? style.checked : null }>
-			<RiLayoutGridFill />
+		<Link 
+		  to="/projects"
+		  className={ pathname === '/projects' || pathname === '/projects/filter' ? style.checked : null }
+			>
+			  <RiLayoutGridFill />
 		</Link>
 		<Link to="/technologies" className={ pathname === '/technologies' ? style.checked : null }>
 			<BiCodeAlt />

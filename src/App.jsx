@@ -5,10 +5,25 @@ import Home from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Loading from './components/Loading';
 import Projects from './pages/Projects';
+import ProjectsFilter from './pages/ProjectsFilter';
 
 function App() {
   return (
     <Switch>
+			<Route
+        exact
+        path="/projects/filter/:details"
+        render={() => (
+          <Projects />
+        )}
+      />
+			<Route
+        exact
+        path="/projects/filter"
+        render={() => (
+          <ProjectsFilter />
+        )}
+      />
       <Route
         exact
         path="/projects"

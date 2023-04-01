@@ -76,7 +76,6 @@
 	animation: animationFromMain;
 	animation-duration: 3s;
 
-
 	@keyframes animationFromMain {
 		from {
 			opacity: 0;
@@ -85,6 +84,21 @@
 
 		to {
 			opacity: 1;
+			margin-top: 0px;
+		}
+	}
+}
+
+@mixin animationMainLigth() {
+	animation: animationFromMLigth;
+	animation-duration: 3s;
+
+	@keyframes animationFromMLigth {
+		from {
+			margin-top: 100px;
+		}
+
+		to {
 			margin-top: 0px;
 		}
 	}
@@ -102,12 +116,14 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		// justify-content: center;
 		height: 100vh;
 	}
 }
 
 @mixin navegation($sizeSVG) {
 	.nav {
+		z-index: 10;
 		width: 300px;
 		display: flex;
 		flex-grow: 1;
