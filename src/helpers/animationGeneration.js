@@ -123,3 +123,12 @@ export function animationGenerationProjects(instance, styles) {
 	)
 }
 
+export function animationGenerationProjectsFilter(instance, styles) {
+	return (
+		instance.options({ loop: true, speed: 30, deleteSpeed: 15 }).pause(500).move(-1)
+		.pause(1500).delete(15).pause(100).type(`<span class="${ styles.colorPurple }">produção</span>`)
+		.pause(1500).delete(8).pause(100).type(`<span class="${ styles.colorBlue }">desenvolvimento</span>`)
+		.pause(1500)
+	)
+}
+

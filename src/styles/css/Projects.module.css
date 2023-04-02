@@ -151,7 +151,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 94px;
+    gap: 45px;
   }
   .main .divProject {
     display: flex;
@@ -175,12 +175,11 @@
     opacity: 0;
     visibility: hidden;
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     z-index: 1;
-    margin-top: -155px;
+    position: absolute;
   }
   .main .divProject .divInfo div {
     display: flex;
