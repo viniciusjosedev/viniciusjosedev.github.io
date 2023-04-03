@@ -1,20 +1,20 @@
 import React from "react";
 import Navegation from '../components/Navegation';
-import styles from '../styles/css/ProjectsFilter.module.css';
+import styles from '../styles/css/ProjectsAll.module.css';
 import projects from "../data/listProjects";
 import buttonGithub from '../styles/images/buttonGithub.svg';
 import buttonDeploy from '../styles/images/buttonDeploy.svg';
 import TypeIt from "typeit-react";
 import { animationGenerationProjectsFilter } from "../helpers/animationGeneration";
 
-export default function Projects() {
+export default function ProjectsAll() {
 	return (
 		<>
 			<Navegation />
 			<header className={ styles.header }>
 				<TypeIt
 					className={ styles.spanTitle }
-					options={ { speed: 30, deleteSpeed: 15, loop: true } }
+					options={ { speed: 30, deleteSpeed: 15 } }
 					getBeforeInit={(instance) => {
 						return animationGenerationProjectsFilter(instance, styles);
 					}}
@@ -58,6 +58,9 @@ export default function Projects() {
 					))}
 				</section>
 			</main>
+			<div className={ styles.divSeparation }>
+				<p />
+			</div>
 		</>
 	)
 }

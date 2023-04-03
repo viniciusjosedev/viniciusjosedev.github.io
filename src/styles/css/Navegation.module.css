@@ -61,8 +61,8 @@
     background: radial-gradient(circle, rgb(0, 131, 242) 0%, rgb(178, 0, 242) 100%);
   }
   .nav a svg {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     color: white;
   }
 }

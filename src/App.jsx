@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Loading from './components/Loading';
 import Projects from './pages/Projects';
-import ProjectsFilter from './pages/ProjectsFilter';
+import ProjectsAll from './pages/ProjectsAll';
+import Technologies from './pages/Technologies';
 
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
       />
 			<Route
         exact
-        path="/projects/filter"
+        path="/projects/all"
         render={() => (
-          <ProjectsFilter />
+          <ProjectsAll />
         )}
       />
       <Route
@@ -35,7 +36,7 @@ function App() {
         exact
         path="/technologies"
         render={() => (
-          <Navegation />
+          <Technologies />
         )}
       />
 			<Route

@@ -2,24 +2,289 @@
 @import '_responsive';
 @import '_helpers';
 
+@include responsive(m) {
+	@include bodyGenerator('../images/backgroundImageDesktop.svg') {
+		justify-content: left;
+	}
+	
+	.main {
+		@include animationMain();
+		// background-color: red;
+		// height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		column-gap: 50px;
+		row-gap: 25px;
+		margin-bottom: 100px;
+		.sectionPrimary {
+			display: flex;
+			flex-flow: column wrap;
+			align-items: center;
+			justify-content: center;
+			.spanTitle {
+				@include default-fonts(text);
+				// background-color: #0091f5;
+				color: white;
+				font-size: 30px;
+				font-weight: 700;
+				text-align: center;
+				height: 75px;
+				text-transform: uppercase;
+				margin-top: 50px;
+			}
+			.spanText {
+				@include default-fonts(text);
+				text-align: justify;
+				color: white;
+				font-size: 20px;
+				margin-top: 30px;
+				// background-color: red;
+				width: 90%;
+			}
+			.colorBlue {
+				color: #0091f5;
+			}
+			.colorPurple {
+				color: #EB00FF;
+			}
+			button {
+				border: none;
+				background: transparent;
+				margin-top: 40px;
+				display: flex;
+				justify-content: left;
+				// width: 170px;
+				margin-bottom: 40px;
+				img {
+					width: 200px;
+				}
+			}
+		}
+		.divProject {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: transparent;
+			width: 95%;
+			z-index: 0;
+			background-color: black;
+			.imgProject {
+				transition-delay: 100ms;
+				transition-duration: 500ms;
+				width: 100%;
+				border: 3px solid rgba(0, 0, 0, 0.37);
+				border-radius: 10px;
+			}
+			.divInfo {
+				transition-delay: 100ms;
+				transition-duration: 500ms;
+				opacity: 0;
+				visibility: hidden;	
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-direction: column;
+				z-index: 1;
+				// background-color: red;
+				position: absolute;
+				div {
+					display: flex;
+					background: transparent;
+					gap: 20px;
+					border: none;
+					button {
+						border:none;
+						background: transparent;
+						margin: 0px;
+						img {
+							width: 150px;
+							border: none;
+						}
+					}
+					// @include styledButton(150);
+				}
+				p {
+					margin: 0px;
+					// background: red;
+					color: white;
+					font-weight: 700;
+					margin-top: 20px;
+					font-size: 25px;
+				}
+			}
+		}
+		.divProject:hover {
+			.imgProject {
+				filter: brightness(10%);
+			}
+			.divInfo {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+	.divSeparation {
+		// background-color: red;
+		width: 100%;
+		// height: 200px;
+	}
+}
+
+@include responsive(t) {
+	@include bodyGenerator('../images/backgroundImageDesktop.svg') {
+		justify-content: left;
+	}
+	.main {
+		@include animationMain();
+		// background-color: red;
+		box-sizing: content-box;
+		// height: 100%;
+		width: 100%;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 50px;
+		row-gap: 25px;
+		margin-top: 25px;
+		margin-bottom: 150px;
+		.sectionPrimary {
+			display: flex;
+			flex-flow: column wrap;
+			align-items: center;
+			justify-content: center;
+			.spanTitle {
+				@include default-fonts(text);
+				color: white;
+				font-size: 35px;
+				font-weight: 700;
+				text-align: left;
+				height: 75px;
+				text-transform: uppercase;
+				margin-top: 50px;
+			}
+			.spanText {
+				@include default-fonts(text);
+				text-align: justify;
+				color: white;
+				font-size: 25px;
+				margin-top: 5px;
+				// background-color: red;
+				width: 450px;
+			}
+			.colorBlue {
+				color: #0091f5;
+			}
+			.colorPurple {
+				color: #EB00FF;
+			}
+			button {
+				border: none;
+				background: transparent;
+				margin-top: 40px;
+				display: flex;
+				justify-content: left;
+				// background-color: red;
+				margin-bottom: 40px;
+				// width: 270px;
+				img {
+					border: none;
+					width: 270px;
+				}
+			}
+			// @include styledButton(270);
+		}
+		.divProject {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: transparent;
+			max-width: 600px;
+			z-index: 0;
+			background-color: black;
+			.imgProject {
+				transition-delay: 100ms;
+				transition-duration: 500ms;
+				width: 600px;
+				border: 3px solid rgba(0, 0, 0, 0.37);
+				border-radius: 10px;
+			}
+			.divInfo {
+				transition-delay: 100ms;
+				transition-duration: 500ms;
+				opacity: 0;
+				visibility: hidden;	
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-direction: column;
+				z-index: 1;
+				// background-color: red;
+				position: absolute;
+				div {
+					display: flex;
+					background: transparent;
+					gap: 20px;
+					border: none;
+					button {
+						border:none;
+						background: transparent;
+						margin: 0px;
+						img {
+							width: 250px;
+							border: none;
+						}
+					}
+				}
+				p {
+					margin: 0px;
+					// background: red;
+					color: white;
+					font-weight: 700;
+					margin-top: 20px;
+					font-size: 40px;
+				}
+			}
+		}
+		.divProject:hover {
+			.imgProject {
+				filter: brightness(10%);
+			}
+			.divInfo {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+	.divSeparation {
+		// background-color: red;
+		width: 100%;
+		// height: 200px;
+	}
+}
+
 @include responsive(d) {
 	@include bodyGenerator('../images/backgroundImageDesktop.svg');
 	.main {
 		@include animationMain();
 		// background-color: red;
-		box-sizing: content-box;
 		height: 100%;
-		width: 100%;
+		width: 1100px;
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		column-gap: 50px;
+		row-gap: 25px;
+		// margin-top: 50%;
 		.sectionPrimary {
 			display: flex;
-			flex-direction: column;
-			// background-color: blue;
-			height: 100%;
+			flex-flow: column wrap;
 			align-items: left;
 			justify-content: center;
 			.spanTitle {
@@ -30,6 +295,7 @@
 				text-align: left;
 				height: 75px;
 				text-transform: uppercase;
+				margin-top: 50px;
 			}
 			.spanText {
 				@include default-fonts(text);
@@ -60,14 +326,6 @@
 			}
 			@include styledButton(165);
 		}
-		.sectionSecond {
-			height: 77%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			gap: 45px;
-		}
 		.divProject {
 			display: flex;
 			flex-direction: column;
@@ -76,7 +334,7 @@
 			background: transparent;
 			max-width: 450px;
 			z-index: 0;
-			// background-color: yellow;
+			background-color: black;
 			.imgProject {
 				transition-delay: 100ms;
 				transition-duration: 500ms;

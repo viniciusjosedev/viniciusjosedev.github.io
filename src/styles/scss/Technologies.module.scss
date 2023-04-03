@@ -1,0 +1,63 @@
+@import '_fonts.scss';
+@import '_responsive';
+@import '_helpers';
+
+@include responsive(d) {
+	.main {
+		background-color: red;
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.colorBlue {
+			color: #0091f5;
+		}
+		.colorPurple {
+			color: #EB00FF;
+		}
+		.spanTitle {
+			@include default-fonts(text);
+			// background-color: #0091f5;
+			color: white;
+			font-size: 30px;
+			font-weight: 700;
+			text-align: center;
+			height: 75px;
+			text-transform: uppercase;
+			margin-top: 50px;
+		}
+		.section {
+			background-color: blue;
+			display: flex;
+			width: 80%;
+			align-items: center;
+			justify-content: space-around;
+			
+			.divFront {
+				background-color: yellow;
+				display: flex;
+				width: 50%;
+				justify-content: space-around;
+				align-items: center;
+				flex-flow: row wrap;
+				row-gap: 50px;
+				img {
+					border: 1px solid #EB00FF;
+					border-radius: 1px;
+					width: 80px;
+				}
+			}
+			.divBack {
+				background-color: green;
+				display: flex;
+				width: 50%;
+				justify-content: center;
+				align-items: center;
+				flex-flow: row wrap;
+			}
+		}
+	}
+
+}
+

@@ -64,76 +64,46 @@ export default function Projects() {
 					<button 
 						type="button"
 						className={styles['glow-on-hover']}
-						onClick={ () => push('/projects/filter') }
+						// onClick={ () => push('/projects/all') }
 					>
 					  <img src={ buttonAllProjects } alt="" />
 					</button>
-					{projectsFilter.filter((e, i) => i === 0).map(({ name, image, github, deploy }) => (
-						<div
-							className={ `${styles.divProject}` }
-							key={ name }
-						>
-							<img src={image} alt={name} className={ styles.imgProject } />
-							<div 
-								className={ styles.divInfo }
-							>
-								<div>
-									<button 
-									  type="button" 
-										className={styles['glow-on-hover']}
-										onClick={ () => window.open(github, '_blank') }
-									>
-										<img src={ buttonGithub } alt="" />
-									</button>
-									{ deploy && (
-										<button 
-										  type="button" 
-											className={styles['glow-on-hover']}
-											onClick={ () => window.open(deploy, '_blank') }
-											>
-											<img src={ buttonDeploy } alt="" />
-										</button>
-									) }
-								</div>
-								<p>{ name }</p>
-							</div>
-						</div>
-					))}
 				</section>
-				<section className={ styles.sectionSecond }>
-					{projectsFilter.filter((e, i) => i !== 0).map(({ name, image, github, deploy }) => (
+				{projectsFilter.map(({ name, image, github, deploy }) => (
+					<div 
+						className={ styles.divProject }
+						key={ name }
+					>
+						<img src={image} alt={name} className={ styles.imgProject } />
 						<div 
-							className={ styles.divProject }
-							key={ name }
+							className={ styles.divInfo }
 						>
-							<img src={image} alt={name} className={ styles.imgProject } />
-							<div 
-								className={ styles.divInfo }
-							>
-								<div>
+							<div>
+								<button 
+									type="button" 
+									className={styles['glow-on-hover']}
+									onClick={ () => window.open(github, '_blank') }
+									>
+									<img src={ buttonGithub } alt="" />
+								</button>
+								{ deploy && (
 									<button 
-									  type="button" 
-										className={styles['glow-on-hover']}
-										onClick={ () => window.open(github, '_blank') }
-										>
-										<img src={ buttonGithub } alt="" />
+									type="button" 
+									className={styles['glow-on-hover']}
+									onClick={ () => window.open(github, '_blank') }
+									>
+										<img src={ buttonDeploy } alt="" />
 									</button>
-									{ deploy && (
-										<button 
-										type="button" 
-										className={styles['glow-on-hover']}
-										onClick={ () => window.open(github, '_blank') }
-										>
-											<img src={ buttonDeploy } alt="" />
-										</button>
-										) }
-								</div>
-								<p>{ name }</p>
+									) }
 							</div>
+							<p>{ name }</p>
 						</div>
-					))}
-				</section>
-			</main>	
+					</div>
+				))}
+			</main>
+			<div className={ styles.divSeparation }>
+				<p />
+			</div>
 		</>
 	)
 }
