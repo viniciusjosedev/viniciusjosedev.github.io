@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+}
+
+@media ( min-width : 0 ) and ( max-width : 682px ) {
+
+  .nav {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 50px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 85%;
+    width: 300px;
+    z-index: 10;
+  }
+
+  .nav a {
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .nav a.checked {
+    background: radial-gradient(circle, rgb(0, 131, 242) 0%, rgb(178, 0, 242) 100%);
+  }
+
+  .nav a svg {
+    color: white;
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media ( min-width : 683px ) and ( max-width : 900px ) {
+
+  .nav {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 50px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 85%;
+    width: 300px;
+    z-index: 10;
+  }
+
+  .nav a {
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .nav a.checked {
+    background: radial-gradient(circle, rgb(0, 131, 242) 0%, rgb(178, 0, 242) 100%);
+  }
+
+  .nav a svg {
+    color: white;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media ( min-width : 901px ) {
+
+  .nav {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 50px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 85%;
+    width: 300px;
+    z-index: 10;
+  }
+
+  .nav a {
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .nav a.checked {
+    background: radial-gradient(circle, rgb(0, 131, 242) 0%, rgb(178, 0, 242) 100%);
+  }
+
+  .nav a svg {
+    color: white;
+    height: 25px;
+    width: 25px;
+  }
+}

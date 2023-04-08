@@ -9,7 +9,7 @@ export default function Technologies() {
 	return (
 		<>
 			<Navegation />
-			<main className={ style.main }>
+			<main className={ style.main } id={ style.main }>
 				<TypeIt 
 					options={ { speed: 30 } }
 					className={ style.spanTitle }

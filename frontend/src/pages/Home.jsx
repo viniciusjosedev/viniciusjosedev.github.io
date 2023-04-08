@@ -17,6 +17,7 @@ function Home() {
 	const { checkedHome, setCheckedHome } = useContext(WidthContext);
 	const { push } = useHistory();
 
+
 	// Simulação de requisição para API
 	useEffect(() => {
 		async function init() {
@@ -30,8 +31,9 @@ function Home() {
 	}, [])
 
 	const handleClick = () => {
-		const texto = `Isto é um teste.`
-		window.open(`https://wa.me/5581991550920?text=${encodeURIComponent(texto)}`, '_blank')
+		// const texto = `Isto é um teste.`
+		// window.open(`https://wa.me/5581991550920?text=${encodeURIComponent(texto)}`, '_blank')
+		window.open(`mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=teste&body=teste&cc=viniciusjosedev@gmail.com`)
 	}
 
 
