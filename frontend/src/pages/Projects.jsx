@@ -90,7 +90,7 @@ export default function Projects() {
 									<button 
 									type="button" 
 									className={styles['glow-on-hover']}
-									onClick={ () => window.open(github, '_blank') }
+									onClick={ () => window.open(deploy, '_blank') }
 									>
 										<img src={ buttonDeploy } alt="" />
 									</button>
