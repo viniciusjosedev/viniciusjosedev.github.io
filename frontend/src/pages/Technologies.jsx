@@ -4,6 +4,12 @@ import style from '../styles/css/Technologies.module.css';
 import TypeIt from "typeit-react";
 import { animationGenerationProjectsTechnologies } from "../helpers/animationGeneration";
 import iconHTML from '../styles/images/icon-html5.png';
+import iconCSS3 from '../styles/images/icon-css3.png';
+import iconJavaScript from '../styles/images/icon-javascript.png';
+import iconReact from '../styles/images/icon-react.png';
+import iconrRedux from '../styles/images/icon-redux.png';
+import iconSASS from '../styles/images/icon-sass.png';
+import iconJest from '../styles/images/icon-jest.png';
 
 export default function Technologies() {
 	return (
@@ -21,6 +27,12 @@ export default function Technologies() {
 				<section className={ style.section }>
 					<div className={ style.divFront }>
 						<img src={ iconHTML } alt="" />
+						<img src={ iconCSS3 } alt="" />
+						<img src={ iconJavaScript } alt="" />
+						<img src={ iconSASS } alt="" />
+						<img src={ iconReact } alt="" />
+						<img src={ iconrRedux } alt="" />
+						<img src={ iconJest } alt="" />
 						{/* <img src="https://img.shields.io/badge/-CSS-0091f5?style=for-the-badge&logo=CSS3&logoColor=1572B6&labelColor=0091f5" alt="" />
 						<img src="https://img.shields.io/badge/-SASS-0091f5?style=for-the-badge&logo=sass&labelColor=0091f5" alt="" />
 						<img src="https://img.shields.io/badge/-JavaScript-0091f5?style=for-the-badge&logo=javascript&labelColor=0091f5" alt="" />
