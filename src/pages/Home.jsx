@@ -31,9 +31,9 @@ function Home() {
 	}, [])
 
 	const handleClick = () => {
-		// const texto = `Isto é um teste.`
-		// window.open(`https://wa.me/5581991550920?text=${encodeURIComponent(texto)}`, '_blank')
-		window.open(`mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=teste&body=teste&cc=viniciusjosedev@gmail.com`)
+		const TEXTO = 'Fala Vinicius! Tenho um trabalho para fazermos! Tem interesse em saber mais?'
+		  .split(' ').join('%20');
+		window.open(`mailto:viniciusjosedev@gmail.com?subject=Vamos%20trabalhar%20juntos!&body=${TEXTO}&Content-Type=text/html`)
 	}
 
 
@@ -78,7 +78,7 @@ function Home() {
 						<button
 						type="button" 
 						className={style['glow-on-hover']}
-						onClick={ handleClick }
+						onClick={ () => push('/contact') }
 						>
 							<img src={ buttonContact } alt="" />
 						</button>

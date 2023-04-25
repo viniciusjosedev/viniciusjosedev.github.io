@@ -111,7 +111,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
   .main section {
     animation: animationFromMain;
@@ -254,6 +254,9 @@
     border: 5px solid #0091f5;
     border-radius: 50%;
     display: none;
+  }
+  .divSpace {
+    width: 100%;
   }
 }
 @media (min-width: 683px) and (max-width: 900px) {

@@ -7,6 +7,7 @@ import Loading from './components/Loading';
 import Projects from './pages/Projects';
 import ProjectsAll from './pages/ProjectsAll';
 import Technologies from './pages/Technologies';
+import Contacts from './pages/Contacts';
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
         exact
         path="/contact"
         render={() => (
-          <Navegation />
+          <Contacts />
         )}
       />
 			<Route
