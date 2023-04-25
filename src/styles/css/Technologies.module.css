@@ -1,12 +1,182 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@media (min-width: 901px) {
+@media (min-width: 0px) and (max-width: 682px) {
   .main {
-    background-color: red;
+    animation: animationFromMain;
+    animation-duration: 3s;
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 150px;
+  }
+  @keyframes animationFromMain {
+    from {
+      opacity: 0;
+      margin-top: 10px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  .main .colorBlue {
+    color: #0091f5;
+  }
+  .main .colorPurple {
+    color: #EB00FF;
+  }
+  .main .spanTitle {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    height: 75px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .main .section {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+  }
+  .main .section .divFront {
+    border: 1px solid #0091f5;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    row-gap: 50px;
+    column-gap: 50px;
+  }
+  .main .section .divFront img {
+    border-radius: 1px;
+    width: 50px;
+  }
+  .main .section .divBack {
+    border: 1px solid #EB00FF;
+    padding: 20px;
+    display: flex;
+    width: 40%;
+    border-radius: 15px;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    row-gap: 50px;
+    column-gap: 80px;
+  }
+  .main .section .divBack img {
+    border-radius: 1px;
+    width: 50px;
+  }
+  .divSeparation {
+    width: 100%;
+  }
+}
+@media (min-width: 683px) and (max-width: 900px) {
+  .main {
+    animation: animationFromMain;
+    animation-duration: 3s;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+  }
+  @keyframes animationFromMain {
+    from {
+      opacity: 0;
+      margin-top: 10px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  .main .colorBlue {
+    color: #0091f5;
+  }
+  .main .colorPurple {
+    color: #EB00FF;
+  }
+  .main .spanTitle {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    height: 75px;
+    width: 80%;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .main .section {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+  }
+  .main .section .divFront {
+    border: 1px solid #0091f5;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    row-gap: 50px;
+    column-gap: 50px;
+  }
+  .main .section .divFront img {
+    border-radius: 1px;
+    width: 80px;
+  }
+  .main .section .divBack {
+    border: 1px solid #EB00FF;
+    padding: 20px;
+    display: flex;
+    width: 40%;
+    border-radius: 15px;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    row-gap: 50px;
+    column-gap: 80px;
+  }
+  .main .section .divBack img {
+    border-radius: 1px;
+    width: 80px;
+  }
+  .divSeparation {
+    width: 100%;
+  }
+}
+@media (min-width: 901px) {
+  .main {
+    animation: animationFromMain;
+    animation-duration: 3s;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @keyframes animationFromMain {
+    from {
+      opacity: 0;
+      margin-top: 10px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0px;
+    }
   }
   .main .colorBlue {
     color: #0091f5;
@@ -25,32 +195,43 @@
     margin-top: 50px;
   }
   .main .section {
-    background-color: blue;
     display: flex;
     width: 80%;
-    align-items: center;
     justify-content: space-around;
   }
   .main .section .divFront {
-    background-color: yellow;
+    border: 1px solid #0091f5;
+    border-radius: 15px;
+    padding: 20px;
     display: flex;
-    width: 50%;
+    width: 40%;
     justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
     row-gap: 50px;
+    column-gap: 50px;
   }
   .main .section .divFront img {
-    border: 1px solid #EB00FF;
     border-radius: 1px;
     width: 80px;
   }
   .main .section .divBack {
-    background-color: green;
+    border: 1px solid #EB00FF;
+    padding: 20px;
     display: flex;
-    width: 50%;
-    justify-content: center;
+    width: 40%;
+    border-radius: 15px;
+    justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
+    row-gap: 50px;
+    column-gap: 80px;
+  }
+  .main .section .divBack img {
+    border-radius: 1px;
+    width: 80px;
+  }
+  .divSeparation {
+    width: 100%;
   }
 }

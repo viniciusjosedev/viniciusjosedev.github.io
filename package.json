@@ -7,9 +7,11 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
+    "node-fetch": "1.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-google-charts": "^4.0.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
@@ -51,9 +53,10 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0"
   },
-	"browser": {
-		"fs": false,
-		"path": false,
-		"os": false
-	}
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+  "type": "module"
 }
