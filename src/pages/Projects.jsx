@@ -88,7 +88,7 @@ export default function Projects() {
 								</button>
 								{ deploy && (
 									<button 
-									type="button" 
+									type="button"
 									className={styles['glow-on-hover']}
 									onClick={ () => window.open(deploy, '_blank') }
 									>
