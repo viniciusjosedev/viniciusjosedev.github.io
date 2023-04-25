@@ -85,7 +85,7 @@ function Home() {
 						<button 
 						type="button" 
 						className={style['glow-on-hover']}
-						onClick={ () => push('/portfolio') }
+						onClick={ () => push('/projects') }
 						>
 							<img src={ buttonPortfolio } alt="" />
 						</button>
