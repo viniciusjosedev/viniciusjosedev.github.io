@@ -58,5 +58,6 @@
     "path": false,
     "os": false
   },
-  "type": "module"
+  "type": "module",
+	"homepage": "."
 }
